@@ -96,21 +96,21 @@
       "name": "Kazumi",
       "bundleIdentifier": "com.predidit.kazumi",
       "developerName": "Predidit",
-      "version": "2.1.8",
-      "versionDate": "2026-07-02T13:54:11Z",
-      "versionDescription": "- 新增 4:3 画面比例模式 (#2240) (@Predidit)\r\n- 桌面端播放器现在会记忆音量与静音状态 (#1599 #2046) (@liangyuR)\r\n- 长按倍速现在会跟随默认方向键/长按倍速设置 (#2248) (@UzawaReisaQwQ)\r\n- 改进特殊集数的识别与切集体验 (@liangyuR)\r\n- 改进弹幕时间偏移设置与相关底部面板 (@Predidit)\r\n- 调整 Android 默认硬件解码器为 MediaCodec，并升级播放组件 (@Predidit)\r\n- 修复部分地区Github规则镜像不生效的问题 (@Predidit)\r\n- 修复特定情况下多次快进可能导致弹幕冻结的问题 (@Predidit)\r\n- 优化项目文档 (@ChouChiu)",
+      "version": "2.2.0",
+      "versionDate": "2026-07-09T14:36:25Z",
+      "versionDescription": "- 新增API规则支持 (@Predidit)\r\n- 新增 Windows 平台系统代理支持 (@Predidit)\r\n- 修复历史记录较多时应用启动卡顿的问题 (#2293) (#2233) (@Predidit)\r\n- 修复已经已完播剧集重复观看从结尾处开始的问题 (#2222) (@Predidit)\r\n- 修复部分 Android 设备硬件解码不生效的问题 (@Predidit)\r\n- 修复特定情况下播放器控制面板不会自动隐藏的问题 (@liangyuR)\r\n- 修复部分地区规则仓库镜像不可用的问题 (@Predidit)\r\n- 修复HTTP站点不可用的问题 (#2292) (@Predidit)\r\n- 更多的播放器控制面板动效 (@LiggMax)\r\n- 其他代码结构调整 (@Predidit)",
       "localizedDescription": "Kazumi 是一款基于手机端的番剧搜索与播放工具。",
-      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.1.8/Kazumi_ios_2.1.8_no_sign.ipa",
+      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.0/Kazumi_ios_2.2.0_no_sign.ipa",
       "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/refs/heads/main/appicon/IMG_2250.jpeg",
       "tintColor": "#000000",
-      "size": 28346335,
+      "size": 28150602,
       "versions": [
         {
-          "version": "2.1.8",
-          "date": "2026-07-02T13:54:11Z",
-          "localizedDescription": "- 新增 4:3 画面比例模式 (#2240) (@Predidit)\r\n- 桌面端播放器现在会记忆音量与静音状态 (#1599 #2046) (@liangyuR)\r\n- 长按倍速现在会跟随默认方向键/长按倍速设置 (#2248) (@UzawaReisaQwQ)\r\n- 改进特殊集数的识别与切集体验 (@liangyuR)\r\n- 改进弹幕时间偏移设置与相关底部面板 (@Predidit)\r\n- 调整 Android 默认硬件解码器为 MediaCodec，并升级播放组件 (@Predidit)\r\n- 修复部分地区Github规则镜像不生效的问题 (@Predidit)\r\n- 修复特定情况下多次快进可能导致弹幕冻结的问题 (@Predidit)\r\n- 优化项目文档 (@ChouChiu)",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.1.8/Kazumi_ios_2.1.8_no_sign.ipa",
-          "size": 28346335
+          "version": "2.2.0",
+          "date": "2026-07-09T14:36:25Z",
+          "localizedDescription": "- 新增API规则支持 (@Predidit)\r\n- 新增 Windows 平台系统代理支持 (@Predidit)\r\n- 修复历史记录较多时应用启动卡顿的问题 (#2293) (#2233) (@Predidit)\r\n- 修复已经已完播剧集重复观看从结尾处开始的问题 (#2222) (@Predidit)\r\n- 修复部分 Android 设备硬件解码不生效的问题 (@Predidit)\r\n- 修复特定情况下播放器控制面板不会自动隐藏的问题 (@liangyuR)\r\n- 修复部分地区规则仓库镜像不可用的问题 (@Predidit)\r\n- 修复HTTP站点不可用的问题 (#2292) (@Predidit)\r\n- 更多的播放器控制面板动效 (@LiggMax)\r\n- 其他代码结构调整 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.0/Kazumi_ios_2.2.0_no_sign.ipa",
+          "size": 28150602
         }
       ]
     }
