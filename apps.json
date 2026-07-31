@@ -96,21 +96,21 @@
       "name": "Kazumi",
       "bundleIdentifier": "com.predidit.kazumi",
       "developerName": "Predidit",
-      "version": "2.2.3",
-      "versionDate": "2026-07-23T05:09:55Z",
-      "versionDescription": "> [!NOTE]\r\n> 这是 2.2.2 的热修复版本，更多更新日志参考 2.2.2",
+      "version": "2.2.5",
+      "versionDate": "2026-07-30T17:01:02Z",
+      "versionDescription": "> [!NOTE]\r\n> 这是 2.2.4 的热修复版本，更多更新日志参考 2.2.4",
       "localizedDescription": "Kazumi 是一款基于手机端的番剧搜索与播放工具。",
-      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.3/Kazumi_ios_2.2.3_no_sign.ipa",
+      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.5/Kazumi_ios_2.2.5_no_sign.ipa",
       "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/refs/heads/main/appicon/IMG_2250.jpeg",
       "tintColor": "#000000",
-      "size": 29182954,
+      "size": 29556445,
       "versions": [
         {
-          "version": "2.2.3",
-          "date": "2026-07-23T05:09:55Z",
-          "localizedDescription": "> [!NOTE]\r\n> 这是 2.2.2 的热修复版本，更多更新日志参考 2.2.2",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.3/Kazumi_ios_2.2.3_no_sign.ipa",
-          "size": 29182954
+          "version": "2.2.5",
+          "date": "2026-07-30T17:01:02Z",
+          "localizedDescription": "> [!NOTE]\r\n> 这是 2.2.4 的热修复版本，更多更新日志参考 2.2.4",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.5/Kazumi_ios_2.2.5_no_sign.ipa",
+          "size": 29556445
         }
       ]
     }
