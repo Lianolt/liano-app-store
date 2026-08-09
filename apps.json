@@ -96,21 +96,21 @@
       "name": "Kazumi",
       "bundleIdentifier": "com.predidit.kazumi",
       "developerName": "Predidit",
-      "version": "2.2.6",
-      "versionDate": "2026-08-01T10:29:14Z",
-      "versionDescription": "- 修复图片加载问题",
+      "version": "2.2.7",
+      "versionDate": "2026-08-08T08:17:26Z",
+      "versionDescription": "- 制作人员列表现在得到正确排序 (#2051) (@ChouChiu)\r\n- 修复 Linux 平台 nvidia 设备启用超分辨率可能出现偏色的问题 (#1547) (@zhn1100)\r\n- 优化 windows 平台视频解析器 (@Predidit)\r\n- 其他 UI 调整 (@Predidit)\r\n- 其他文档调整 (@WhiteXero)",
       "localizedDescription": "Kazumi 是一款基于手机端的番剧搜索与播放工具。",
-      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.6/Kazumi_ios_2.2.6_no_sign.ipa",
+      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.7/Kazumi_ios_2.2.7_no_sign.ipa",
       "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/refs/heads/main/appicon/IMG_2250.jpeg",
       "tintColor": "#000000",
-      "size": 29552334,
+      "size": 29554015,
       "versions": [
         {
-          "version": "2.2.6",
-          "date": "2026-08-01T10:29:14Z",
-          "localizedDescription": "- 修复图片加载问题",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.6/Kazumi_ios_2.2.6_no_sign.ipa",
-          "size": 29552334
+          "version": "2.2.7",
+          "date": "2026-08-08T08:17:26Z",
+          "localizedDescription": "- 制作人员列表现在得到正确排序 (#2051) (@ChouChiu)\r\n- 修复 Linux 平台 nvidia 设备启用超分辨率可能出现偏色的问题 (#1547) (@zhn1100)\r\n- 优化 windows 平台视频解析器 (@Predidit)\r\n- 其他 UI 调整 (@Predidit)\r\n- 其他文档调整 (@WhiteXero)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.7/Kazumi_ios_2.2.7_no_sign.ipa",
+          "size": 29554015
         }
       ]
     }
