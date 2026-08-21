@@ -28,7 +28,7 @@ https://raw.githubusercontent.com/happier1125/liano-app-store/main/apps.json
 
 ✨ 特性
 
-* 📦 收录多个优秀的 iOS IPA 应用
+* 📦 收录多个第三方的 iOS IPA 应用
 * 🔄 自动同步 GitHub Releases 最新版本
 * 📋 自动获取 Release 更新日志
 * 📏 自动获取 IPA 实际文件大小
@@ -67,20 +67,11 @@ Pixiv-SwiftUI	Eslzzyl	GitHub
 
 .github/workflows/sync-all.yml
 
-默认每天自动运行一次，同时支持在 GitHub Actions 中手动运行。
+默认每天自动运行 2 次，同时支持在 GitHub Actions 中手动运行。
 
 同步内容
 
 每次同步会从对应项目的 GitHub Releases 获取最新 Release，并自动更新：
-
-version
-versionDate
-versionDescription
-downloadURL
-size
-versions
-
-其中：
 
 * version — 最新版本号
 * versionDate — Release 发布时间
@@ -171,54 +162,6 @@ GitHub Actions 自动同步脚本。
 中增加对应的自动同步任务。
 
 之后 GitHub Actions 会负责自动更新版本信息。
-
-⸻
-
-🖼️ 应用图标
-
-应用图标统一存放在：
-
-appicon/
-
-推荐使用：
-
-* PNG
-* JPG / JPEG
-
-图标 URL 示例：
-
-https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Gopeed.png
-
-⸻
-
-🛠️ GitHub Actions
-
-自动同步工作流：
-
-.github/workflows/sync-all.yml
-
-自动运行
-
-默认每天执行一次。
-
-手动运行
-
-进入：
-
-GitHub
-→ Actions
-→ Sync All Apps Updates
-→ Run workflow
-
-即可立即执行同步。
-
-如果应用有新版本，工作流会自动修改：
-
-apps.json
-
-并提交新的 Commit。
-
-如果所有应用都没有更新，则不会产生新的 Commit。
 
 ⸻
 
