@@ -1,0 +1,228 @@
+{
+  "name": "Liano's ipasource",
+  "identifier": "com.happier1125.ipasource",
+  "sourceURL": "即将替换为真实URL",
+  "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/User.jpeg",
+  "apps": [
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.bggRGjQaUbCoE.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "version": "2.1.0",
+      "versionDate": "2026-07-12T04:26:28Z",
+      "versionDescription": "支持评论区投票\r\n支持显示话题折叠内容\r\n支持显示动态`赞与转发`详情\r\n动态支持点击评论按钮直达评论区\r\n专栏支持跨行复制 #2437 by @My-Responsitories\r\n视频字幕支持未登录使用 #2426 by @My-Responsitories\r\n支持导出 `vtt`、`srt` 格式字幕 co-by @My-Responsitories\r\n解码格式设置改为多选 #2426 by @My-Responsitories #2444 co-by @Starfallan\r\n其他调整 #2426 by @My-Responsitories\r\n\r\n界面优化\r\n调整默认滑动弹簧系数\r\n安卓硬解优先使用 `mediacodec` \r\nLinux 构建优化 #2441 by @VillagerTom\r\n\r\n修复桌面端富文本选中编辑\r\n修复 bug\r\n\r\n其他调整",
+      "localizedDescription": "PiliPlus 客户端，专为更好的体验而生。",
+      "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.0/PiliPlus_ios_2.1.0%2B5109.ipa",
+      "iconURL": "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png",
+      "tintColor": "#000000",
+      "size": 23440601,
+      "versions": [
+        {
+          "version": "2.1.0",
+          "date": "2026-07-12T04:26:28Z",
+          "localizedDescription": "支持评论区投票\r\n支持显示话题折叠内容\r\n支持显示动态`赞与转发`详情\r\n动态支持点击评论按钮直达评论区\r\n专栏支持跨行复制 #2437 by @My-Responsitories\r\n视频字幕支持未登录使用 #2426 by @My-Responsitories\r\n支持导出 `vtt`、`srt` 格式字幕 co-by @My-Responsitories\r\n解码格式设置改为多选 #2426 by @My-Responsitories #2444 co-by @Starfallan\r\n其他调整 #2426 by @My-Responsitories\r\n\r\n界面优化\r\n调整默认滑动弹簧系数\r\n安卓硬解优先使用 `mediacodec` \r\nLinux 构建优化 #2441 by @VillagerTom\r\n\r\n修复桌面端富文本选中编辑\r\n修复 bug\r\n\r\n其他调整",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.0/PiliPlus_ios_2.1.0%2B5109.ipa",
+          "size": 23440601
+        }
+      ]
+    },
+    {
+      "name": "Feather",
+      "bundleIdentifier": "com.claration.feather",
+      "developerName": "CLARATION",
+      "version": "v2.9.0",
+      "versionDate": "2026-07-05T02:11:53Z",
+      "versionDescription": "Thank you for all your feedback and contributions!\r\n\r\n> [!TIP]\r\n> For `idevice` configuration, you can use [Impactor](https://github.com/claration/Impactor?tab=readme-ov-file#pairing-file) for easily retrieving a pairing file for installing!\r\n\r\n## What's Changed\r\n* Added tweak options in default signing options.\r\n* Added ability to search for identifier's in Library @ismailcarlik in https://github.com/claration/Feather/pull/652\r\n* Fixed issue in the file enumeration logic, by using the path property instead of method.\r\n* Fixed credit links.\r\n* Fixed duplicate repository in recommended repositories.\r\n\r\n## New Contributors\r\n* @xiangfeidexiaohuo made their first contribution in https://github.com/claration/Feather/pull/634\r\n* @osageling made their first contribution in https://github.com/claration/Feather/pull/642\r\n\r\n**Full Changelog**: https://github.com/claration/Feather/compare/v2.8.2...v2.9.0",
+      "localizedDescription": "CLARATION 的 Feather 客户端，轻量强大的侧载工具。",
+      "downloadURL": "https://github.com/claration/Feather/releases/download/v2.9.0/Feather.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Feather.png",
+      "tintColor": "#000000",
+      "size": 14241853,
+      "versions": [
+        {
+          "version": "v2.9.0",
+          "date": "2026-07-05T02:11:53Z",
+          "localizedDescription": "Thank you for all your feedback and contributions!\r\n\r\n> [!TIP]\r\n> For `idevice` configuration, you can use [Impactor](https://github.com/claration/Impactor?tab=readme-ov-file#pairing-file) for easily retrieving a pairing file for installing!\r\n\r\n## What's Changed\r\n* Added tweak options in default signing options.\r\n* Added ability to search for identifier's in Library @ismailcarlik in https://github.com/claration/Feather/pull/652\r\n* Fixed issue in the file enumeration logic, by using the path property instead of method.\r\n* Fixed credit links.\r\n* Fixed duplicate repository in recommended repositories.\r\n\r\n## New Contributors\r\n* @xiangfeidexiaohuo made their first contribution in https://github.com/claration/Feather/pull/634\r\n* @osageling made their first contribution in https://github.com/claration/Feather/pull/642\r\n\r\n**Full Changelog**: https://github.com/claration/Feather/compare/v2.8.2...v2.9.0",
+          "downloadURL": "https://github.com/claration/Feather/releases/download/v2.9.0/Feather.ipa",
+          "size": 14241853
+        }
+      ]
+    },
+    {
+      "name": "PvZ Hybrid",
+      "bundleIdentifier": "com.dey410.pvzhybrid",
+      "developerName": "Dey410",
+      "version": "v0.20",
+      "versionDate": "2026-05-03T16:30:45Z",
+      "versionDescription": "[iOS/Mac]植物大战僵尸杂交版v0.20同步更新\r\n更新公告见官方",
+      "localizedDescription": "植物大战僵尸杂交版 iOS 移植，尽享塔防乐趣。",
+      "downloadURL": "https://github.com/Dey410/PvZ-Hybrid-For-iOS/releases/download/v0.20/0.20-.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/PVZH.png",
+      "tintColor": "#000000",
+      "size": 401621556,
+      "versions": [
+        {
+          "version": "v0.20",
+          "date": "2026-05-03T16:30:45Z",
+          "localizedDescription": "[iOS/Mac]植物大战僵尸杂交版v0.20同步更新\r\n更新公告见官方",
+          "downloadURL": "https://github.com/Dey410/PvZ-Hybrid-For-iOS/releases/download/v0.20/0.20-.ipa",
+          "size": 401621556
+        }
+      ]
+    },
+    {
+      "name": "Kazumi",
+      "bundleIdentifier": "com.predidit.kazumi",
+      "developerName": "Predidit",
+      "version": "2.2.8",
+      "versionDate": "2026-08-15T01:52:16Z",
+      "versionDescription": "- 适配 flutter 3.47 (@Predidit)\r\n- 修复 windows 平台部分视频来源只能播放5秒零碎片段的问题 (#2265 #1976 #2301) (@Predidit)\r\n- 兼容更多非标准视频流 (@zhn1100)\r\n- 桌面平台UI性能优化 (@Predidit)",
+      "localizedDescription": "Kazumi 是一款基于手机端的番剧搜索与播放工具。",
+      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.8/Kazumi_ios_2.2.8_no_sign.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Kazumi.jpeg",
+      "tintColor": "#000000",
+      "size": 29635192,
+      "versions": [
+        {
+          "version": "2.2.8",
+          "date": "2026-08-15T01:52:16Z",
+          "localizedDescription": "- 适配 flutter 3.47 (@Predidit)\r\n- 修复 windows 平台部分视频来源只能播放5秒零碎片段的问题 (#2265 #1976 #2301) (@Predidit)\r\n- 兼容更多非标准视频流 (@zhn1100)\r\n- 桌面平台UI性能优化 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.8/Kazumi_ios_2.2.8_no_sign.ipa",
+          "size": 29635192
+        }
+      ]
+    },
+    {
+      "name": "Gopeed",
+      "bundleIdentifier": "com.gopeed.gopeed",
+      "developerName": "GopeedLab",
+      "version": "v1.9.3",
+      "versionDate": "2026-03-18T12:26:01Z",
+      "versionDescription": "feat: ed2k 协议支持（重大特性）\n\n修复不支持断点续传的 HTTP 链接下载超出文件总大小、等待任务 isCreate 状态更新以及 RPM 图标路径问题；同时迁移文档链接并更新国际化。",
+      "localizedDescription": "Gopeed 是一款基于 Golang + Flutter 的跨平台高速下载器，支持 HTTP、BitTorrent、Magnet 和 ED2K，并可通过 API 与扩展进行功能扩展。",
+      "downloadURL": "https://github.com/GopeedLab/gopeed/releases/download/v1.9.3/Gopeed-v1.9.3-ios.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Gopeed.png",
+      "tintColor": "#000000",
+      "size": 0,
+      "versions": [
+        {
+          "version": "v1.9.3",
+          "date": "2026-03-18T12:26:01Z",
+          "localizedDescription": "feat: ed2k 协议支持（重大特性）\n\n修复不支持断点续传的 HTTP 链接下载超出文件总大小、等待任务 isCreate 状态更新以及 RPM 图标路径问题；同时迁移文档链接并更新国际化。",
+          "downloadURL": "https://github.com/GopeedLab/gopeed/releases/download/v1.9.3/Gopeed-v1.9.3-ios.ipa",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "TiebaPure",
+      "bundleIdentifier": "dev.infinityf4p.tiebapure",
+      "developerName": "infinityf4p",
+      "version": "v1.4.13",
+      "versionDate": "2026-08-20T15:32:00Z",
+      "versionDescription": "修复多图帖子首图放大后的低清过渡图问题；修复回复倒序分页、楼中楼动画、退出与阅读位置恢复；修复 iOS 18 长按选择帖子文字时可能出现的布局卡死；修复登录账号发帖、回帖时 TBS 刷新失败的问题。",
+      "localizedDescription": "TiebaPure 是原生 SwiftUI 构建的非官方贴吧 iOS 客户端，支持浏览、搜索、收藏、媒体查看与本地阅读记录。",
+      "downloadURL": "https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.13/TiebaPure-iOS-v1.4.13.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/TiebaPure.jpg",
+      "tintColor": "#000000",
+      "size": 0,
+      "versions": [
+        {
+          "version": "v1.4.13",
+          "date": "2026-08-20T15:32:00Z",
+          "localizedDescription": "修复多图帖子首图放大后的低清过渡图问题；修复回复倒序分页、楼中楼动画、退出与阅读位置恢复；修复 iOS 18 长按选择帖子文字时可能出现的布局卡死；修复登录账号发帖、回帖时 TBS 刷新失败的问题。",
+          "downloadURL": "https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.13/TiebaPure-iOS-v1.4.13.ipa",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "Cilicili",
+      "bundleIdentifier": "com.rone89.cilicili",
+      "developerName": "Rone89",
+      "version": "v1.0.21",
+      "versionDate": "2026-08-20T15:54:00Z",
+      "versionDescription": "视频播放的开播、线路选择和失败兜底重新加固；弹幕解析更轻量；首页、动态和直播列表下拉刷新更稳定。修复播放器遮罩越界、详情页弹窗无响应，以及状态栏、播放恢复和并发时序问题。",
+      "localizedDescription": "Cilicili 是使用 SwiftUI 开发的第三方 B 站 iOS 客户端实验项目，专注于更轻量的浏览、动态、视频播放和弹幕体验。",
+      "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.21/CiliCili-v1.0.21-unsigned.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Cilicili.png",
+      "tintColor": "#000000",
+      "size": 0,
+      "versions": [
+        {
+          "version": "v1.0.21",
+          "date": "2026-08-20T15:54:00Z",
+          "localizedDescription": "视频播放的开播、线路选择和失败兜底重新加固；弹幕解析更轻量；首页、动态和直播列表下拉刷新更稳定。修复播放器遮罩越界、详情页弹窗无响应，以及状态栏、播放恢复和并发时序问题。",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.21/CiliCili-v1.0.21-unsigned.ipa",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "Melox",
+      "bundleIdentifier": "azki.moye.MeloX",
+      "developerName": "youshen2",
+      "version": "v1.2.0",
+      "versionDate": "2026-08-21T03:44:00Z",
+      "versionDescription": "增加 Apple Music 26 歌词样式并设为默认；新增 Apple Music 风格播放器背景、双人歌词对唱、多源歌词优选与手动选择、蜂窝网络音质设置及多语言支持；修复播放列表、艺人导航和 AutoMix 卡顿问题。",
+      "localizedDescription": "MeloX 是一款使用 SwiftUI 原生开发的第三方网易云音乐客户端，采用液体玻璃设计，参考 Apple Music 风格并提供丰富的歌词与播放功能。",
+      "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.2.0/MeloX-iOS-unsigned.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Melox.png",
+      "tintColor": "#000000",
+      "size": 0,
+      "versions": [
+        {
+          "version": "v1.2.0",
+          "date": "2026-08-21T03:44:00Z",
+          "localizedDescription": "增加 Apple Music 26 歌词样式并设为默认；新增 Apple Music 风格播放器背景、双人歌词对唱、多源歌词优选与手动选择、蜂窝网络音质设置及多语言支持；修复播放列表、艺人导航和 AutoMix 卡顿问题。",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.2.0/MeloX-iOS-unsigned.ipa",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "Open Reading",
+      "bundleIdentifier": "com.miloquinn.openreading",
+      "developerName": "miloquinn",
+      "version": "v2.6.0",
+      "versionDate": "2026-08-17T08:17:00Z",
+      "versionDescription": "重点完善后台听书、平板双页仿真翻页和在线书源重复打开体验，并修复发现页与翻页首帧的恢复和闪烁问题。新增 iOS spoken-audio、Now Playing、锁屏与控制中心操作，以及更完善的书源缓存与后台刷新。",
+      "localizedDescription": "Open Reading（开元阅读）是一款本地优先、跨平台、开放书源的开源电子书阅读器，采用 Flutter 原生阅读引擎。",
+      "downloadURL": "https://github.com/miloquinn/open-reading/releases/download/v2.6.0/open_reading_v2.6.0_ios.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Open-Reading.png",
+      "tintColor": "#000000",
+      "size": 0,
+      "versions": [
+        {
+          "version": "v2.6.0",
+          "date": "2026-08-17T08:17:00Z",
+          "localizedDescription": "重点完善后台听书、平板双页仿真翻页和在线书源重复打开体验，并修复发现页与翻页首帧的恢复和闪烁问题。新增 iOS spoken-audio、Now Playing、锁屏与控制中心操作，以及更完善的书源缓存与后台刷新。",
+          "downloadURL": "https://github.com/miloquinn/open-reading/releases/download/v2.6.0/open_reading_v2.6.0_ios.ipa",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "Pixiv-SwiftUI",
+      "bundleIdentifier": "com.eslzzyl.PixivSwiftUI",
+      "developerName": "Eslzzyl",
+      "version": "v0.15.0",
+      "versionDate": "2026-08-16T12:56:00Z",
+      "versionDescription": "新增图片文字翻译、VLM 图片解释、图片磁盘缓存上限和用户详情骨架屏；重构全屏图片预览并优化预取、错误重试和登录体验；修复翻译、网页登录、iOS 上下文菜单、关注状态及下载完整性等问题.",
+      "localizedDescription": "Pixiv-SwiftUI 是为现代 Apple 平台设计的第三方 Pixiv 客户端，支持 iOS、iPadOS 和 macOS。",
+      "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.15.0/Pixiv-SwiftUI.ipa",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Pixiv-SwiftUI.PNG",
+      "tintColor": "#000000",
+      "size": 0,
+      "versions": [
+        {
+          "version": "v0.15.0",
+          "date": "2026-08-16T12:56:00Z",
+          "localizedDescription": "新增图片文字翻译、VLM 图片解释、图片磁盘缓存上限和用户详情骨架屏；重构全屏图片预览并优化预取、错误重试和登录体验；修复翻译、网页登录、iOS 上下文菜单、关注状态及下载完整性等问题.",
+          "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.15.0/Pixiv-SwiftUI.ipa",
+          "size": 0
+        }
+      ]
+    }
+  ]
+}
