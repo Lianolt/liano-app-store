@@ -20,21 +20,24 @@ https://raw.githubusercontent.com/happier1125/liano-app-store/main/apps.json
 
 ⸻
 
-📱 当前收录应用
+🔗 数据来源
 
-应用	开发者	项目
-PiliPlus	bggRGjQaUbCoE	GitHub
-Feather	CLARATION	GitHub
-PvZ Hybrid	Dey410	GitHub
-Kazumi	Predidit	GitHub
-Gopeed	GopeedLab	GitHub
-TiebaPure	infinityf4p	GitHub
-Cilicili	Rone89	GitHub
-MeloX	youshen2	GitHub
-Open Reading	miloquinn	GitHub
-Pixiv-SwiftUI	Eslzzyl	GitHub
+本软件源中的应用版本信息主要来自对应项目的 GitHub Releases。
 
-应用版本、更新日志、文件大小和 IPA 下载地址会根据对应项目的 GitHub Releases 自动更新。
+应用项目：
+
+* PiliPlus
+* Feather
+* PvZ Hybrid
+* Kazumi
+* Gopeed
+* TiebaPure
+* Cilicili
+* MeloX
+* Open Reading
+* Pixiv-SwiftUI
+
+应用的具体版权、许可证及开发者权益均归原项目作者所有。
 
 ⸻
 
@@ -141,27 +144,6 @@ GitHub Actions 自动同步脚本。
 中增加对应的自动同步任务。
 
 之后 GitHub Actions 会负责自动更新版本信息。
-
-⸻
-
-🔗 数据来源
-
-本软件源中的应用版本信息主要来自对应项目的 GitHub Releases。
-
-应用项目：
-
-* PiliPlus
-* Feather
-* PvZ Hybrid
-* Kazumi
-* Gopeed
-* TiebaPure
-* Cilicili
-* MeloX
-* Open Reading
-* Pixiv-SwiftUI
-
-应用的具体版权、许可证及开发者权益均归原项目作者所有。
 
 ⸻
 
