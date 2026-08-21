@@ -2,7 +2,7 @@
   "name": "Liano's ipasource",
   "identifier": "com.happier1125.ipasource",
   "sourceURL": "即将替换为真实URL",
-  "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/refs/heads/main/IMG_0146.jpeg",
+  "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/User.jpeg",
   "apps": [
     {
       "name": "PiliPlus",
@@ -35,7 +35,7 @@
       "versionDescription": "ui大改，支持自定义背景，懒得写了\r\n<p align=\"center\"> <img src=\"https://github.com/user-attachments/assets/470856ee-ca61-485e-98fc-1ebdf2395dba\" width=\"32%\" /> <img src=\"https://github.com/user-attachments/assets/ec8ae6be-c164-4f21-b1ab-b53a33dba780\" width=\"32%\" /> <img src=\"https://github.com/user-attachments/assets/19c865cb-d6f7-47b1-95e5-01f10cf71418\" width=\"32%\" /> </p>",
       "localizedDescription": "AREKERT 的 Read 阅读器，纯净的阅读体验。",
       "downloadURL": "https://github.com/AREKERT/read/releases/download/1.2.2/qireader_1.2.2_1.ipa",
-      "iconURL": "https://raw.githubusercontent.com/AREKERT/read/refs/heads/main/img/AppIcon.png",
+      "iconURL": "https://raw.githubusercontent.com/AREKERT/read/main/img/AppIcon.png",
       "tintColor": "#000000",
       "size": 9153313,
       "versions": [
@@ -57,7 +57,7 @@
       "versionDescription": "Thank you for all your feedback and contributions!\r\n\r\n> [!TIP]\r\n> For `idevice` configuration, you can use [Impactor](https://github.com/claration/Impactor?tab=readme-ov-file#pairing-file) for easily retrieving a pairing file for installing!\r\n\r\n## What's Changed\r\n* Added tweak options in default signing options.\r\n* Added ability to search for identifier's in Library @ismailcarlik in https://github.com/claration/Feather/pull/652\r\n* Fixed issue in the file enumeration logic, by using the path property instead of method.\r\n* Fixed credit links.\r\n* Fixed duplicate repository in recommended repositories.\r\n\r\n## New Contributors\r\n* @xiangfeidexiaohuo made their first contribution in https://github.com/claration/Feather/pull/634\r\n* @osageling made their first contribution in https://github.com/claration/Feather/pull/642\r\n\r\n**Full Changelog**: https://github.com/claration/Feather/compare/v2.8.2...v2.9.0",
       "localizedDescription": "CLARATION 的 Feather 客户端，轻量强大的侧载工具。",
       "downloadURL": "https://github.com/claration/Feather/releases/download/v2.9.0/Feather.ipa",
-      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/refs/heads/main/appicon/IMG_2132.png",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Feather.png",
       "tintColor": "#000000",
       "size": 14241853,
       "versions": [
@@ -79,7 +79,7 @@
       "versionDescription": "[iOS/Mac]植物大战僵尸杂交版v0.20同步更新\r\n更新公告见官方",
       "localizedDescription": "植物大战僵尸杂交版 iOS 移植，尽享塔防乐趣。",
       "downloadURL": "https://github.com/Dey410/PvZ-Hybrid-For-iOS/releases/download/v0.20/0.20-.ipa",
-      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/refs/heads/main/appicon/IMG_2128.png",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/PVZH.png",
       "tintColor": "#000000",
       "size": 401621556,
       "versions": [
@@ -101,7 +101,7 @@
       "versionDescription": "- 适配 flutter 3.47 (@Predidit)\r\n- 修复 windows 平台部分视频来源只能播放5秒零碎片段的问题 (#2265 #1976 #2301) (@Predidit)\r\n- 兼容更多非标准视频流 (@zhn1100)\r\n- 桌面平台UI性能优化 (@Predidit)",
       "localizedDescription": "Kazumi 是一款基于手机端的番剧搜索与播放工具。",
       "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.8/Kazumi_ios_2.2.8_no_sign.ipa",
-      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/refs/heads/main/appicon/IMG_2250.jpeg",
+      "iconURL": "https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/Kazumi.jpeg",
       "tintColor": "#000000",
       "size": 29635192,
       "versions": [
