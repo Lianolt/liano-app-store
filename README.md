@@ -1,5 +1,3 @@
-Liano’s IPA Source
-
 一个面向 iOS 侧载用户的第三方 IPA 软件源，适用于 全能签、Feather、SideStore / AltStore 类客户端。
 
 本仓库主要收录开源项目及第三方 iOS 应用的 IPA 安装包，并通过 GitHub Releases 自动同步应用版本、更新日志、文件大小和下载地址。
@@ -14,30 +12,11 @@ Identifier：
 
 com.happier1125.ipasource
 
-软件源图标：
-
-https://raw.githubusercontent.com/happier1125/liano-app-store/main/appicon/User.jpeg
-
 软件源地址：
 
 https://raw.githubusercontent.com/happier1125/liano-app-store/main/apps.json
 
 将上面的 apps.json 地址添加到支持自定义软件源的 IPA 签名/侧载工具即可。
-
-⸻
-
-✨ 特性
-
-* 📦 收录多个第三方的 iOS IPA 应用
-* 🔄 自动同步 GitHub Releases 最新版本
-* 📋 自动获取 Release 更新日志
-* 📏 自动获取 IPA 实际文件大小
-* 🔗 自动获取 GitHub 官方下载地址
-* 🖼️ 支持自定义应用图标
-* 🕒 自动记录版本发布时间
-* 📚 保留应用版本信息
-* 🤖 GitHub Actions 自动执行同步
-* 🚫 不在本仓库存储 IPA 文件，降低仓库体积
 
 ⸻
 
@@ -208,20 +187,6 @@ GitHub Actions 自动同步脚本。
 请遵守所在地法律法规以及相关软件的许可证协议。
 
 如果某个项目作者希望从本软件源移除其应用，请提交 Issue 或联系仓库维护者。
-
-⸻
-
-⭐ 支持
-
-如果这个软件源对你有帮助，可以：
-
-⭐ Star 本仓库
-
-🐛 提交 Issue
-
-🔧 提交 Pull Request
-
-也欢迎推荐优秀的开源 iOS 项目。
 
 ⸻
 
