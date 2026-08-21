@@ -1,0 +1,162 @@
+name: Sync All Apps Updates
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/sync-all.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Sync PiliPlus
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/bggRGjQaUbCoE/PiliPlus/releases/latest > release_0.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_0.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_0.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_0.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_0.json)
+          BODY=$(jq -r '.body // ""' release_0.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "PiliPlus: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[0].version=$v | .apps[0].versionDate=$d | .apps[0].versionDescription=$body | .apps[0].downloadURL=$url | .apps[0].size=$size | .apps[0].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "PiliPlus: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync Feather
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/CLARATION/Feather/releases/latest > release_1.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_1.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_1.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_1.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_1.json)
+          BODY=$(jq -r '.body // ""' release_1.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "Feather: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[1].version=$v | .apps[1].versionDate=$d | .apps[1].versionDescription=$body | .apps[1].downloadURL=$url | .apps[1].size=$size | .apps[1].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "Feather: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync PvZ Hybrid
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/Dey410/PvZ-Hybrid-For-iOS/releases/latest > release_2.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_2.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_2.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_2.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_2.json)
+          BODY=$(jq -r '.body // ""' release_2.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "PvZ Hybrid: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[2].version=$v | .apps[2].versionDate=$d | .apps[2].versionDescription=$body | .apps[2].downloadURL=$url | .apps[2].size=$size | .apps[2].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "PvZ Hybrid: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync Kazumi
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/Predidit/Kazumi/releases/latest > release_3.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_3.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_3.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_3.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_3.json)
+          BODY=$(jq -r '.body // ""' release_3.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "Kazumi: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[3].version=$v | .apps[3].versionDate=$d | .apps[3].versionDescription=$body | .apps[3].downloadURL=$url | .apps[3].size=$size | .apps[3].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "Kazumi: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync Gopeed
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/GopeedLab/gopeed/releases/latest > release_4.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_4.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_4.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_4.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_4.json)
+          BODY=$(jq -r '.body // ""' release_4.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "Gopeed: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[4].version=$v | .apps[4].versionDate=$d | .apps[4].versionDescription=$body | .apps[4].downloadURL=$url | .apps[4].size=$size | .apps[4].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "Gopeed: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync TiebaPure
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/infinityf4p/TiebaPure-iOS/releases/latest > release_5.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_5.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_5.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_5.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_5.json)
+          BODY=$(jq -r '.body // ""' release_5.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "TiebaPure: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[5].version=$v | .apps[5].versionDate=$d | .apps[5].versionDescription=$body | .apps[5].downloadURL=$url | .apps[5].size=$size | .apps[5].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "TiebaPure: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync Cilicili
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/Rone89/cilicili/releases/latest > release_6.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_6.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_6.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_6.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_6.json)
+          BODY=$(jq -r '.body // ""' release_6.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "Cilicili: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[6].version=$v | .apps[6].versionDate=$d | .apps[6].versionDescription=$body | .apps[6].downloadURL=$url | .apps[6].size=$size | .apps[6].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "Cilicili: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync Melox
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/youshen2/MeloX/releases/latest > release_7.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_7.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_7.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_7.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_7.json)
+          BODY=$(jq -r '.body // ""' release_7.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "Melox: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[7].version=$v | .apps[7].versionDate=$d | .apps[7].versionDescription=$body | .apps[7].downloadURL=$url | .apps[7].size=$size | .apps[7].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "Melox: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync Open Reading
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/miloquinn/open-reading/releases/latest > release_8.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_8.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_8.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_8.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_8.json)
+          BODY=$(jq -r '.body // ""' release_8.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "Open Reading: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[8].version=$v | .apps[8].versionDate=$d | .apps[8].versionDescription=$body | .apps[8].downloadURL=$url | .apps[8].size=$size | .apps[8].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "Open Reading: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Sync Pixiv-SwiftUI
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/Eslzzyl/Pixiv-SwiftUI/releases/latest > release_9.json
+          IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_9.json)
+          IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_9.json)
+          TAG_NAME=$(jq -r '.tag_name // empty' release_9.json)
+          PUBLISHED_AT=$(jq -r '.published_at // empty' release_9.json)
+          BODY=$(jq -r '.body // ""' release_9.json)
+          if [ -z "$IPA_URL" ] || [ -z "$IPA_SIZE" ] || [ -z "$TAG_NAME" ]; then echo "Pixiv-SwiftUI: 未找到 IPA 或版本信息"; exit 1; fi
+          jq --arg v "$TAG_NAME" --arg d "$PUBLISHED_AT" --arg body "$BODY" --arg url "$IPA_URL" --argjson size "$IPA_SIZE"             '.apps[9].version=$v | .apps[9].versionDate=$d | .apps[9].versionDescription=$body | .apps[9].downloadURL=$url | .apps[9].size=$size | .apps[9].versions=[{"version":$v,"date":$d,"localizedDescription":$body,"downloadURL":$url,"size":$size}]'             apps.json > tmp.json && mv tmp.json apps.json
+          echo "Pixiv-SwiftUI: $TAG_NAME / $IPA_SIZE bytes"
+      - name: Validate apps.json
+        run: |
+          set -euo pipefail
+          jq empty apps.json
+          test "$(jq '[.apps[] | select(.developerName == "AREKERT" or .bundleIdentifier == "com.arekert.read")] | length' apps.json)" = "0"
+          test "$(jq '.apps | length' apps.json)" = "10"
+          if jq -e '[.apps[] | select(.size == 0 or .downloadURL == null or .version == null)] | length > 0' apps.json >/dev/null; then
+            echo '存在尚未同步的应用元数据'; exit 1
+          fi
+          echo 'apps.json 校验通过。'
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --local user.name 'github-actions[bot]'
+          git add apps.json
+          if git diff --staged --quiet; then
+            echo '所有版本均无变化，无需提交。'
+          else
+            git commit -m "Auto-sync Liano's ipasource apps"
+            git push
+          fi
