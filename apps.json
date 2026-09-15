@@ -140,21 +140,21 @@
       "name": "Cilicili",
       "bundleIdentifier": "com.rone89.cilicili",
       "developerName": "Rone89",
-      "version": "v1.0.22",
-      "versionDate": "2026-09-01T02:30:22Z",
-      "versionDescription": "# CiliCili 1.0.22 (333)\n\n## 这版更新了啥\n\n- 动态和评论现在可以真正点赞。支持点赞和取消点赞，数量会立即变化，操作失败时会自动恢复。\n- 动态可以进入完整详情页。图文、纯文字和转发动态都能点进去查看，并支持评论、二级回复和对话上下文。\n- 点开视频和切换相关推荐更快。App 会提前准备播放地址和视频首包，减少打开视频后的等待时间。\n- 视频横竖屏切换更稳定。重点减少全屏旋转时的黑屏、画面跳动、播放器重建和播放中断。\n- 底部导航和视频详情切换更顺滑。改善 TabBar 闪现、重叠问题；视频详情的“简介 / 评论”使用系统液态玻璃分段选择器，并保留各自滚动位置。\n- 首页推荐和热门切换更完整。标题和内容会一起滑动切换，切回推荐时保留原来的内容，不会重新刷新。\n\n## 安装包\n\n- 本次 Release 附件提供未签名 IPA，需要使用自签名工具签名后安装。\n- 最低支持 iOS 26.1。",
+      "version": "v1.0.23",
+      "versionDate": "2026-09-14T18:03:24Z",
+      "versionDescription": "## 这版更新了啥\n\n- 优化用户体验。\n- 修复已知问题。\n\n## 安装包\n\n- 未签名 IPA 已上传到本次 Release 附件。",
       "localizedDescription": "Cilicili 是使用 SwiftUI 开发的第三方 B 站 iOS 客户端实验项目，专注于更轻量的浏览、动态、视频播放和弹幕体验。",
-      "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.22/CiliCili-v1.0.22-unsigned.ipa",
+      "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.23/cilicili-1.0.23-473-unsigned.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Cilicili.png",
       "tintColor": "#000000",
-      "size": 22599244,
+      "size": 19393091,
       "versions": [
         {
-          "version": "v1.0.22",
-          "date": "2026-09-01T02:30:22Z",
-          "localizedDescription": "# CiliCili 1.0.22 (333)\n\n## 这版更新了啥\n\n- 动态和评论现在可以真正点赞。支持点赞和取消点赞，数量会立即变化，操作失败时会自动恢复。\n- 动态可以进入完整详情页。图文、纯文字和转发动态都能点进去查看，并支持评论、二级回复和对话上下文。\n- 点开视频和切换相关推荐更快。App 会提前准备播放地址和视频首包，减少打开视频后的等待时间。\n- 视频横竖屏切换更稳定。重点减少全屏旋转时的黑屏、画面跳动、播放器重建和播放中断。\n- 底部导航和视频详情切换更顺滑。改善 TabBar 闪现、重叠问题；视频详情的“简介 / 评论”使用系统液态玻璃分段选择器，并保留各自滚动位置。\n- 首页推荐和热门切换更完整。标题和内容会一起滑动切换，切回推荐时保留原来的内容，不会重新刷新。\n\n## 安装包\n\n- 本次 Release 附件提供未签名 IPA，需要使用自签名工具签名后安装。\n- 最低支持 iOS 26.1。",
-          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.22/CiliCili-v1.0.22-unsigned.ipa",
-          "size": 22599244
+          "version": "v1.0.23",
+          "date": "2026-09-14T18:03:24Z",
+          "localizedDescription": "## 这版更新了啥\n\n- 优化用户体验。\n- 修复已知问题。\n\n## 安装包\n\n- 未签名 IPA 已上传到本次 Release 附件。",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.23/cilicili-1.0.23-473-unsigned.ipa",
+          "size": 19393091
         }
       ]
     },
