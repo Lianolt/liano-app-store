@@ -140,21 +140,21 @@
       "name": "Cilicili",
       "bundleIdentifier": "com.rone89.cilicili",
       "developerName": "Rone89",
-      "version": "v1.0.23",
-      "versionDate": "2026-09-14T18:03:24Z",
-      "versionDescription": "## 这版更新了啥\n\n- 优化用户体验。\n- 修复已知问题。\n\n## 安装包\n\n- 未签名 IPA 已上传到本次 Release 附件。",
+      "version": "v1.1",
+      "versionDate": "2026-10-06T16:04:32Z",
+      "versionDescription": "# CiliCili 1.1\n\n- 修复倍速切换卡顿，优化拖动进度后的画面恢复。\n- 升级弹幕显示，增加更多设置和可选的 Metal 渲染实验。\n- 新增设置搜索和“稍后再看”入口，整理设置分类，正式开放多账号管理。\n- 视频页新增历史返回和 UP 主头像菜单，搜索结果保留浏览位置。\n- 优化图文排版、评论操作和页面加载样式。\n\n未签名 IPA 已上传至下方附件。",
       "localizedDescription": "Cilicili 是使用 SwiftUI 开发的第三方 B 站 iOS 客户端实验项目，专注于更轻量的浏览、动态、视频播放和弹幕体验。",
-      "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.23/cilicili-1.0.23-473-unsigned.ipa",
+      "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1/cilicili-1.1-1-unsigned.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Cilicili.png",
       "tintColor": "#000000",
-      "size": 19393091,
+      "size": 23100138,
       "versions": [
         {
-          "version": "v1.0.23",
-          "date": "2026-09-14T18:03:24Z",
-          "localizedDescription": "## 这版更新了啥\n\n- 优化用户体验。\n- 修复已知问题。\n\n## 安装包\n\n- 未签名 IPA 已上传到本次 Release 附件。",
-          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.0.23/cilicili-1.0.23-473-unsigned.ipa",
-          "size": 19393091
+          "version": "v1.1",
+          "date": "2026-10-06T16:04:32Z",
+          "localizedDescription": "# CiliCili 1.1\n\n- 修复倍速切换卡顿，优化拖动进度后的画面恢复。\n- 升级弹幕显示，增加更多设置和可选的 Metal 渲染实验。\n- 新增设置搜索和“稍后再看”入口，整理设置分类，正式开放多账号管理。\n- 视频页新增历史返回和 UP 主头像菜单，搜索结果保留浏览位置。\n- 优化图文排版、评论操作和页面加载样式。\n\n未签名 IPA 已上传至下方附件。",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1/cilicili-1.1-1-unsigned.ipa",
+          "size": 23100138
         }
       ]
     },
