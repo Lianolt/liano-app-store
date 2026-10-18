@@ -184,21 +184,21 @@
       "name": "Open Reading",
       "bundleIdentifier": "com.miloquinn.openreading",
       "developerName": "miloquinn",
-      "version": "v2.7.3+261018018",
-      "versionDate": "2026-10-18T06:59:10Z",
-      "versionDescription": "本次更新新增 V4 主题启动图，并继续修复启动、书源脚本和备份问题。请保留应用数据直接覆盖更新。\n\n- 新增可跟随主题的启动图，支持明暗模式、横竖屏，以及默认图或自选本地图片；旧主题继续兼容。\n- 减少启动时重复读取书源数据；已有本地协议记录时，本地首页和书库无需等待远端协议刷新。\n- 启动图随本地准备完成退出，不额外延长停留时间。\n- 修复 Apple 平台部分书源定时器异常导致后续请求一直排队的问题。\n- 修复大型书源、目录及设置被较小传输额度误拒绝，导致本地 ZIP 或 WebDAV 备份失败的问题。\n- 完善大记录备份的导出、校验与恢复，保留失败回滚和导出后自检。\n\n本次不修改数据库结构，无需卸载或清空数据。各平台与 TestFlight 使用同一冻结源码和构建号。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/usRgjzQD\n\n源码指纹：`ec21f81c8a9894b71ba0669570d230dc26a73b12`；冻结标签：`codex/frozen-261018018`。",
+      "version": "v2.7.3+261018036",
+      "versionDate": "2026-10-18T10:04:10Z",
+      "versionDescription": "本次以稳定性和阅读体验为主，请保留应用数据直接覆盖更新。\n\n- 优化听书退出衔接，将后续保存和资源清理移出退出动画，并避免旧清理任务影响重新播放。\n- 修复启动图交接时短暂出现无关画面，调整图片、视频和紧凑控件的加载图案显示。\n- 「我的主题」新增恢复默认与撤销，可恢复一致的内置外观，保留已安装资源及阅读数据。\n- 完善分页阅读的底部对齐、页脚间距及章节标题设置，让排版调整更直接。\n- 完善热门段评卡片主题、外框与自定义图案显示；阅读外观选择器支持个人图片并可在读取失败后重试。\n- 书库分类栏可关闭，关闭后恢复全部内容展示，避免保留隐藏筛选。\n- 账号验证方式的绑定与两步验证开关分开，清晰展示当前登录策略。\n- iCloud 设置入口暂显示「敬请期待」；本地 ZIP、WebDAV 和官方同步入口保持可用。\n\n各平台及 TestFlight 使用统一构建号。首次升级建议保留原备份，确认阅读与备份正常后再自行处理旧文件。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/usRgjzQD\n\n源码指纹：`9cfd21d9d04a385d89f8eb194f7255a14496b61e`；冻结标签：`codex/frozen-261018036`。",
       "localizedDescription": "Open Reading（开元阅读）是一款本地优先、跨平台、开放书源的开源电子书阅读器，采用 Flutter 原生阅读引擎。",
-      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.3%2B261018018/OrigoX-iOS-unsigned-2.7.3.ipa",
+      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.3%2B261018036/OrigoX-iOS-unsigned-2.7.3.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Open-Reading.png",
       "tintColor": "#000000",
-      "size": 45137619,
+      "size": 43373290,
       "versions": [
         {
-          "version": "v2.7.3+261018018",
-          "date": "2026-10-18T06:59:10Z",
-          "localizedDescription": "本次更新新增 V4 主题启动图，并继续修复启动、书源脚本和备份问题。请保留应用数据直接覆盖更新。\n\n- 新增可跟随主题的启动图，支持明暗模式、横竖屏，以及默认图或自选本地图片；旧主题继续兼容。\n- 减少启动时重复读取书源数据；已有本地协议记录时，本地首页和书库无需等待远端协议刷新。\n- 启动图随本地准备完成退出，不额外延长停留时间。\n- 修复 Apple 平台部分书源定时器异常导致后续请求一直排队的问题。\n- 修复大型书源、目录及设置被较小传输额度误拒绝，导致本地 ZIP 或 WebDAV 备份失败的问题。\n- 完善大记录备份的导出、校验与恢复，保留失败回滚和导出后自检。\n\n本次不修改数据库结构，无需卸载或清空数据。各平台与 TestFlight 使用同一冻结源码和构建号。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/usRgjzQD\n\n源码指纹：`ec21f81c8a9894b71ba0669570d230dc26a73b12`；冻结标签：`codex/frozen-261018018`。",
-          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.3%2B261018018/OrigoX-iOS-unsigned-2.7.3.ipa",
-          "size": 45137619
+          "version": "v2.7.3+261018036",
+          "date": "2026-10-18T10:04:10Z",
+          "localizedDescription": "本次以稳定性和阅读体验为主，请保留应用数据直接覆盖更新。\n\n- 优化听书退出衔接，将后续保存和资源清理移出退出动画，并避免旧清理任务影响重新播放。\n- 修复启动图交接时短暂出现无关画面，调整图片、视频和紧凑控件的加载图案显示。\n- 「我的主题」新增恢复默认与撤销，可恢复一致的内置外观，保留已安装资源及阅读数据。\n- 完善分页阅读的底部对齐、页脚间距及章节标题设置，让排版调整更直接。\n- 完善热门段评卡片主题、外框与自定义图案显示；阅读外观选择器支持个人图片并可在读取失败后重试。\n- 书库分类栏可关闭，关闭后恢复全部内容展示，避免保留隐藏筛选。\n- 账号验证方式的绑定与两步验证开关分开，清晰展示当前登录策略。\n- iCloud 设置入口暂显示「敬请期待」；本地 ZIP、WebDAV 和官方同步入口保持可用。\n\n各平台及 TestFlight 使用统一构建号。首次升级建议保留原备份，确认阅读与备份正常后再自行处理旧文件。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/usRgjzQD\n\n源码指纹：`9cfd21d9d04a385d89f8eb194f7255a14496b61e`；冻结标签：`codex/frozen-261018036`。",
+          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.3%2B261018036/OrigoX-iOS-unsigned-2.7.3.ipa",
+          "size": 43373290
         }
       ]
     },
