@@ -184,21 +184,21 @@
       "name": "Open Reading",
       "bundleIdentifier": "com.miloquinn.openreading",
       "developerName": "miloquinn",
-      "version": "v2.7.3+261018036",
-      "versionDate": "2026-10-18T10:04:10Z",
-      "versionDescription": "本次以稳定性和阅读体验为主，请保留应用数据直接覆盖更新。\n\n- 优化听书退出衔接，将后续保存和资源清理移出退出动画，并避免旧清理任务影响重新播放。\n- 修复启动图交接时短暂出现无关画面，调整图片、视频和紧凑控件的加载图案显示。\n- 「我的主题」新增恢复默认与撤销，可恢复一致的内置外观，保留已安装资源及阅读数据。\n- 完善分页阅读的底部对齐、页脚间距及章节标题设置，让排版调整更直接。\n- 完善热门段评卡片主题、外框与自定义图案显示；阅读外观选择器支持个人图片并可在读取失败后重试。\n- 书库分类栏可关闭，关闭后恢复全部内容展示，避免保留隐藏筛选。\n- 账号验证方式的绑定与两步验证开关分开，清晰展示当前登录策略。\n- iCloud 设置入口暂显示「敬请期待」；本地 ZIP、WebDAV 和官方同步入口保持可用。\n\n各平台及 TestFlight 使用统一构建号。首次升级建议保留原备份，确认阅读与备份正常后再自行处理旧文件。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/usRgjzQD\n\n源码指纹：`9cfd21d9d04a385d89f8eb194f7255a14496b61e`；冻结标签：`codex/frozen-261018036`。",
+      "version": "v2.7.4+261018050",
+      "versionDate": "2026-10-18T16:12:13Z",
+      "versionDescription": "本次主要改善书源登录、阅读稳定性和界面响应。请保留应用数据直接覆盖更新。\n\n- 修复部分书源密码含特殊字符时，登录请求被重复编码的问题。\n- 改善书源登录状态保存，减少并发请求、浏览器操作及重启后的状态覆盖或丢失。\n- 修复已登录但未启用官方云同步时，本地书籍阅读或档案选择可能受阻的问题。\n- 修复书山聚合特定正文规则未登录时显示编码串的问题，异常时提供登录或重试入口，并重新获取受影响的旧正文缓存。\n- 将字体文件校验移至后台处理，减少底部导航的重复动画与背景滤镜开销。\n- 调整神评论、热门段评的预览布局，减少卡片占用的正文空间。\n\n各发行渠道独立检测更新；TestFlight 与 App Store 以对应渠道实际开放的版本为准。\n\n发布平台：android, ios, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/zxGMgZ5X\n\n源码指纹：`f2187315175ef2461cef05957646abbd367aa821`；冻结标签：`codex/frozen-261018050`。",
       "localizedDescription": "Open Reading（开元阅读）是一款本地优先、跨平台、开放书源的开源电子书阅读器，采用 Flutter 原生阅读引擎。",
-      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.3%2B261018036/OrigoX-iOS-unsigned-2.7.3.ipa",
+      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.4%2B261018050/OrigoX-iOS-unsigned-2.7.4.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Open-Reading.png",
       "tintColor": "#000000",
-      "size": 43373290,
+      "size": 43385909,
       "versions": [
         {
-          "version": "v2.7.3+261018036",
-          "date": "2026-10-18T10:04:10Z",
-          "localizedDescription": "本次以稳定性和阅读体验为主，请保留应用数据直接覆盖更新。\n\n- 优化听书退出衔接，将后续保存和资源清理移出退出动画，并避免旧清理任务影响重新播放。\n- 修复启动图交接时短暂出现无关画面，调整图片、视频和紧凑控件的加载图案显示。\n- 「我的主题」新增恢复默认与撤销，可恢复一致的内置外观，保留已安装资源及阅读数据。\n- 完善分页阅读的底部对齐、页脚间距及章节标题设置，让排版调整更直接。\n- 完善热门段评卡片主题、外框与自定义图案显示；阅读外观选择器支持个人图片并可在读取失败后重试。\n- 书库分类栏可关闭，关闭后恢复全部内容展示，避免保留隐藏筛选。\n- 账号验证方式的绑定与两步验证开关分开，清晰展示当前登录策略。\n- iCloud 设置入口暂显示「敬请期待」；本地 ZIP、WebDAV 和官方同步入口保持可用。\n\n各平台及 TestFlight 使用统一构建号。首次升级建议保留原备份，确认阅读与备份正常后再自行处理旧文件。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/usRgjzQD\n\n源码指纹：`9cfd21d9d04a385d89f8eb194f7255a14496b61e`；冻结标签：`codex/frozen-261018036`。",
-          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.3%2B261018036/OrigoX-iOS-unsigned-2.7.3.ipa",
-          "size": 43373290
+          "version": "v2.7.4+261018050",
+          "date": "2026-10-18T16:12:13Z",
+          "localizedDescription": "本次主要改善书源登录、阅读稳定性和界面响应。请保留应用数据直接覆盖更新。\n\n- 修复部分书源密码含特殊字符时，登录请求被重复编码的问题。\n- 改善书源登录状态保存，减少并发请求、浏览器操作及重启后的状态覆盖或丢失。\n- 修复已登录但未启用官方云同步时，本地书籍阅读或档案选择可能受阻的问题。\n- 修复书山聚合特定正文规则未登录时显示编码串的问题，异常时提供登录或重试入口，并重新获取受影响的旧正文缓存。\n- 将字体文件校验移至后台处理，减少底部导航的重复动画与背景滤镜开销。\n- 调整神评论、热门段评的预览布局，减少卡片占用的正文空间。\n\n各发行渠道独立检测更新；TestFlight 与 App Store 以对应渠道实际开放的版本为准。\n\n发布平台：android, ios, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nTestFlight：https://testflight.apple.com/join/zxGMgZ5X\n\n源码指纹：`f2187315175ef2461cef05957646abbd367aa821`；冻结标签：`codex/frozen-261018050`。",
+          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v2.7.4%2B261018050/OrigoX-iOS-unsigned-2.7.4.ipa",
+          "size": 43385909
         }
       ]
     },
