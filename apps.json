@@ -52,21 +52,21 @@
       "name": "PvZ Hybrid",
       "bundleIdentifier": "com.dey410.pvzhybrid",
       "developerName": "Dey410",
-      "version": "v0.20",
-      "versionDate": "2026-05-03T16:30:45Z",
-      "versionDescription": "[iOS/Mac]植物大战僵尸杂交版v0.20同步更新\r\n更新公告见官方",
+      "version": "v0.31",
+      "versionDate": "2026-10-23T13:03:20Z",
+      "versionDescription": "[iOS/Mac]植物大战僵尸杂交版v0.31同步更新\n更新公告见官方",
       "localizedDescription": "植物大战僵尸杂交版 iOS 移植，尽享塔防乐趣。",
-      "downloadURL": "https://github.com/Dey410/PvZ-Hybrid-For-iOS/releases/download/v0.20/0.20-.ipa",
+      "downloadURL": "https://github.com/Dey410/PvZ-Hybrid-For-iOS/releases/download/v0.31/PVZHybrid-ios-0.31-release-20261023.1-unsigned.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/PVZH.png",
       "tintColor": "#000000",
-      "size": 401621556,
+      "size": 522043902,
       "versions": [
         {
-          "version": "v0.20",
-          "date": "2026-05-03T16:30:45Z",
-          "localizedDescription": "[iOS/Mac]植物大战僵尸杂交版v0.20同步更新\r\n更新公告见官方",
-          "downloadURL": "https://github.com/Dey410/PvZ-Hybrid-For-iOS/releases/download/v0.20/0.20-.ipa",
-          "size": 401621556
+          "version": "v0.31",
+          "date": "2026-10-23T13:03:20Z",
+          "localizedDescription": "[iOS/Mac]植物大战僵尸杂交版v0.31同步更新\n更新公告见官方",
+          "downloadURL": "https://github.com/Dey410/PvZ-Hybrid-For-iOS/releases/download/v0.31/PVZHybrid-ios-0.31-release-20261023.1-unsigned.ipa",
+          "size": 522043902
         }
       ]
     },
@@ -74,21 +74,21 @@
       "name": "Kazumi",
       "bundleIdentifier": "com.predidit.kazumi",
       "developerName": "Predidit",
-      "version": "2.4.1",
-      "versionDate": "2026-10-22T15:04:45Z",
-      "versionDescription": "- 修复规则镜像在部分地区无法访问的问题 (#2747 #2748) (@Predidit)\r\n- 修复 linux 平台 deeplink 无法使用的问题 (@Tobiichi-Origuchi)\r\n> [!NOTE]\r\n> 这是 2.4.0 的热修复版本，更多更新日志参考 2.4.0",
+      "version": "2.4.2",
+      "versionDate": "2026-10-23T09:43:33Z",
+      "versionDescription": "- 修复部分地区规则仓库无法访问的问题",
       "localizedDescription": "Kazumi 是一款基于手机端的番剧搜索与播放工具。",
-      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.1/Kazumi_ios_2.4.1_no_sign.ipa",
+      "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.2/Kazumi_ios_2.4.2_no_sign.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Kazumi.jpeg",
       "tintColor": "#000000",
-      "size": 30514613,
+      "size": 30521004,
       "versions": [
         {
-          "version": "2.4.1",
-          "date": "2026-10-22T15:04:45Z",
-          "localizedDescription": "- 修复规则镜像在部分地区无法访问的问题 (#2747 #2748) (@Predidit)\r\n- 修复 linux 平台 deeplink 无法使用的问题 (@Tobiichi-Origuchi)\r\n> [!NOTE]\r\n> 这是 2.4.0 的热修复版本，更多更新日志参考 2.4.0",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.1/Kazumi_ios_2.4.1_no_sign.ipa",
-          "size": 30514613
+          "version": "2.4.2",
+          "date": "2026-10-23T09:43:33Z",
+          "localizedDescription": "- 修复部分地区规则仓库无法访问的问题",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.2/Kazumi_ios_2.4.2_no_sign.ipa",
+          "size": 30521004
         }
       ]
     },
