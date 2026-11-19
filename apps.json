@@ -184,21 +184,21 @@
       "name": "Open Reading",
       "bundleIdentifier": "com.miloquinn.openreading",
       "developerName": "miloquinn",
-      "version": "v3.0.3+261106012",
-      "versionDate": "2026-11-06T11:36:37Z",
-      "versionDescription": "# 阅读与界面稳定性更新\n\n- 新增“减少动态效果”：保留简短基础过渡和持续加载、下载反馈，减少不必要的弹性与形变。\n- 优化顶部搜索与书源选项面板的展开、键盘切换及文字测量，保留输入草稿和选择状态。\n- 改进连体页签的按住拖动切换、斜向跟随和滚动边界处理。\n- 整理书籍设置和来源面板，支持按需查找同一本书的其他来源。\n- 修复部分书源脚本结束方式导致发现书单丢失的问题，并明确第三方内容来源。\n- 修复来源面板的旧请求覆盖新缓存，以及设置页旧读取、连续保存覆盖刚修改选项的问题。\n- 改善安全存储临时读取失败后的重试恢复；官方云同步入口标注为测试版。\n\n## Android\n\n- Android 首次出图长时间未完成时提供原生救援页，可继续等待或主动选择软件渲染兼容模式并重启。\n- Android 兼容模式选择保存在本机，可恢复默认渲染；正常启动继续使用原有默认渲染。\n\nAndroid 兼容模式可能增加耗电，适合遇到持续白屏时尝试，不代表所有设备的渲染问题均已解决。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\n\n源码指纹：`d12484b7e2733d28d82aec70f568ced09fb29d3a`；冻结标签：`codex/frozen-261106012`。",
+      "version": "v3.1.520+261119050",
+      "versionDate": "2026-11-19T08:47:59Z",
+      "versionDescription": "本次 `3.1.520` 全平台正式发布包含以下核心更新与稳定性修复：\n\n### 主题皮肤与视觉体验\n- 新增 5 套内置主题套件（包豪斯、赛博霓虹、水墨丹青、莫奈花园、复古胶片），完整适配深浅色背景与图标套件。\n- 重构「阅读信息」页眉页脚自定义编辑弹窗并新增实时预览卡片，修复 Release 构建下弹窗灰屏崩溃问题。\n- 修复阅读器主题设置中「加载动画」「评论图标」右侧未对齐问题，优化半屏菜单与翻页方式菜单收起掉帧。\n\n### 阅读器「流韵意境」翻页与交互\n- 新增「流韵意境」系列 7 款创意平面着色器翻页动效（默认「水墨洇染」），支持点击翻页三档节奏与真「上下翻页」模式。\n- 修复阅读器右滑返回手势边界与转场衔接问题。\n- 支持书源正文图文混排与图片双指缩放预览，细化排版参数步进并支持页眉移入状态栏居中显示。\n\n### 同步、会员与稳定性\n- 完善云同步 V3 备份恢复与游标稳定性，修复多账号切换时的云空间状态竞态与 Tab 懒加载问题。\n- 优化 TestFlight 报名页自助重发与渠道自动路由。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\n\n源码指纹：`efcee3ecab2113d78e182381ed6dfa1e9b925478`；冻结标签：`codex/frozen-261119050`。",
       "localizedDescription": "Open Reading（开元阅读）是一款本地优先、跨平台、开放书源的开源电子书阅读器，采用 Flutter 原生阅读引擎。",
-      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.0.3%2B261106012/OrigoX-iOS-unsigned-3.0.3.ipa",
+      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.1.520%2B261119050/OrigoX-iOS-unsigned-3.1.520.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Open-Reading.png",
       "tintColor": "#000000",
-      "size": 45260092,
+      "size": 50663058,
       "versions": [
         {
-          "version": "v3.0.3+261106012",
-          "date": "2026-11-06T11:36:37Z",
-          "localizedDescription": "# 阅读与界面稳定性更新\n\n- 新增“减少动态效果”：保留简短基础过渡和持续加载、下载反馈，减少不必要的弹性与形变。\n- 优化顶部搜索与书源选项面板的展开、键盘切换及文字测量，保留输入草稿和选择状态。\n- 改进连体页签的按住拖动切换、斜向跟随和滚动边界处理。\n- 整理书籍设置和来源面板，支持按需查找同一本书的其他来源。\n- 修复部分书源脚本结束方式导致发现书单丢失的问题，并明确第三方内容来源。\n- 修复来源面板的旧请求覆盖新缓存，以及设置页旧读取、连续保存覆盖刚修改选项的问题。\n- 改善安全存储临时读取失败后的重试恢复；官方云同步入口标注为测试版。\n\n## Android\n\n- Android 首次出图长时间未完成时提供原生救援页，可继续等待或主动选择软件渲染兼容模式并重启。\n- Android 兼容模式选择保存在本机，可恢复默认渲染；正常启动继续使用原有默认渲染。\n\nAndroid 兼容模式可能增加耗电，适合遇到持续白屏时尝试，不代表所有设备的渲染问题均已解决。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\n\n源码指纹：`d12484b7e2733d28d82aec70f568ced09fb29d3a`；冻结标签：`codex/frozen-261106012`。",
-          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.0.3%2B261106012/OrigoX-iOS-unsigned-3.0.3.ipa",
-          "size": 45260092
+          "version": "v3.1.520+261119050",
+          "date": "2026-11-19T08:47:59Z",
+          "localizedDescription": "本次 `3.1.520` 全平台正式发布包含以下核心更新与稳定性修复：\n\n### 主题皮肤与视觉体验\n- 新增 5 套内置主题套件（包豪斯、赛博霓虹、水墨丹青、莫奈花园、复古胶片），完整适配深浅色背景与图标套件。\n- 重构「阅读信息」页眉页脚自定义编辑弹窗并新增实时预览卡片，修复 Release 构建下弹窗灰屏崩溃问题。\n- 修复阅读器主题设置中「加载动画」「评论图标」右侧未对齐问题，优化半屏菜单与翻页方式菜单收起掉帧。\n\n### 阅读器「流韵意境」翻页与交互\n- 新增「流韵意境」系列 7 款创意平面着色器翻页动效（默认「水墨洇染」），支持点击翻页三档节奏与真「上下翻页」模式。\n- 修复阅读器右滑返回手势边界与转场衔接问题。\n- 支持书源正文图文混排与图片双指缩放预览，细化排版参数步进并支持页眉移入状态栏居中显示。\n\n### 同步、会员与稳定性\n- 完善云同步 V3 备份恢复与游标稳定性，修复多账号切换时的云空间状态竞态与 Tab 懒加载问题。\n- 优化 TestFlight 报名页自助重发与渠道自动路由。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\n\n源码指纹：`efcee3ecab2113d78e182381ed6dfa1e9b925478`；冻结标签：`codex/frozen-261119050`。",
+          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.1.520%2B261119050/OrigoX-iOS-unsigned-3.1.520.ipa",
+          "size": 50663058
         }
       ]
     },
