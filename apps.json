@@ -184,21 +184,21 @@
       "name": "Open Reading",
       "bundleIdentifier": "com.miloquinn.openreading",
       "developerName": "miloquinn",
-      "version": "v3.1.520+261119053",
-      "versionDate": "2026-11-19T12:53:35Z",
-      "versionDescription": "本次 `3.1.520` 全平台稳定版汇总最新功能更新与关键稳定性修复：\n\n### 稳定性与界面修复\n- 彻底修复「阅读信息」编辑弹窗切换页眉/页脚与外观时出现灰块及 iOS 开关绘制异常的问题，补齐全部滑块边界保护。\n- 修复自动着色「着色规则」弹窗在大屏 iPhone 上的高度抖动抽搐问题，改为可扩展停靠弹窗体验。\n- 修复 iPhone Duo 及横屏灵动岛等带水平安全区设备上，书源管理等子页顶栏右上角按钮被系统区域遮挡的问题。\n\n### 书源引擎与阅读体验\n- 全面提升阅读 3.0（Legado）书源发现页与搜索通用兼容性，支持宽松 JSON、嵌套脚本模板、`escape` 编码与 `bookUrlPattern` 详情重定向，修复聚合书源书名回归。\n- 包含 5 套全新内置主题套件（包豪斯、赛博霓虹、水墨丹青、莫奈花园、复古胶片）、「流韵意境」7 款翻页动效、阅读器右滑返回修复与云同步 V3 稳定性优化。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\n\n源码指纹：`bdc5dde61e0ffbe4bf7359092401fe331f0666ba`；冻结标签：`codex/frozen-261119053`。",
+      "version": "v3.2.0+261124004",
+      "versionDate": "2026-11-24T09:17:45Z",
+      "versionDescription": "# 会员与元知 AI 体系升级、全编码本地 TXT 引擎、书源秒开与跨端稳定性优化\n\n本次 `3.2.0` 全平台正式版汇总自 `3.1.520` 以来的核心功能升级、书源与本地阅读引擎重构以及跨端性能与稳定性优化：\n\n### 会员体系与元知 AI 升级\n- 会员体系精简统一为「普通版 + 高级版（Origo Premium）」；历史已购「开卷」权益的老用户免费自动直升「Origo 高级版」，无需补差或重新购买。\n- 正式接入元知 AI 月度订阅套餐（AI Plus / AI Pro / AI Max），支持一键订阅与恢复购买，全面开放旗舰模型推理、AI 分角色沉浸朗读、章节总结、更大共享云空间及阅读 Agent 书源编辑辅助能力；补齐 macOS StoreKit 2 原生桥接支持。\n\n### 本地阅读与全编码 TXT 引擎重构\n- 本地 TXT 与 EPUB 中文解码全面升级至完整 1/2/4 字节 `GB18030-2022`，新增 `UTF-32`（含/无 BOM）与 `Windows-1252` 支持；流式索引支持跨块安全解码与极少量残损字节容错恢复，彻底解决含 `0xA1 0x40` 等传统排版字符的大体积 TXT 无法打开问题。\n- 新增 `卷一` 等传统分卷章节目录识别；优化阅读器两端对齐跨页断段末行平摊，展开阅读控制栏期间自动锁定翻页/滚动防误触，从目录/书签/批注跳转后自动收起控制栏。\n\n### 书源秒开、Legado 3.0 兼容与 Android QuickJS 修复\n- 优化书源详情页目录/首章预热与后台 SWR 刷新链路，已缓存章节点击秒开不阻塞；扩展阅读 3.0（Legado）规则与脚本兼容（Java 内联正则 flags、`@@` HTML 模式、`+:regex`/`-:regex`、根数组 JSONPath、XPath 轴/谓词、`preUpdateJs`/`formatJs` 等）。\n- 修复 Android 书源 QuickJS 运行时因 `jsSetMemoryLimit` 符号未导出导致的发现页与脚本执行崩溃，改用原生 `JS_SetMemoryLimit` 内存上限控制。\n\n### 跨端性能、显存瘦身与稳定性加固\n- 加固 Android 12–16 下载与听书前台服务（FGS）异常防护与 `WebView` 初始化容错，移动端切入后台自动防抖释放可重建内存缓存，降低系统杀后台概率。\n- 优化 Android 平板 120Hz 刷新率匹配、首页卡片重绘隔离、液态玻璃着色器预热及冗余重绘消除；精简历史冗余打包资源，Android ARM64 安装包体积直降约 7.5 MB。\n- 完善 3D 书架滚动条对齐、全局触感反馈开关及 iPhone Duo 竖向导航栏与统计页适配。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\nTestFlight：https://testflight.apple.com/join/zxGMgZ5X\n\n源码指纹：`e28b8e2a75c0db68413147d7b8daa3d2aec0948f`；冻结标签：`codex/frozen-261124004`。",
       "localizedDescription": "Open Reading（开元阅读）是一款本地优先、跨平台、开放书源的开源电子书阅读器，采用 Flutter 原生阅读引擎。",
-      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.1.520%2B261119053/OrigoX-iOS-unsigned-3.1.520.ipa",
+      "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.2.0%2B261124004/OrigoX-iOS-unsigned-3.2.0.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Open-Reading.png",
       "tintColor": "#000000",
-      "size": 50697392,
+      "size": 44312341,
       "versions": [
         {
-          "version": "v3.1.520+261119053",
-          "date": "2026-11-19T12:53:35Z",
-          "localizedDescription": "本次 `3.1.520` 全平台稳定版汇总最新功能更新与关键稳定性修复：\n\n### 稳定性与界面修复\n- 彻底修复「阅读信息」编辑弹窗切换页眉/页脚与外观时出现灰块及 iOS 开关绘制异常的问题，补齐全部滑块边界保护。\n- 修复自动着色「着色规则」弹窗在大屏 iPhone 上的高度抖动抽搐问题，改为可扩展停靠弹窗体验。\n- 修复 iPhone Duo 及横屏灵动岛等带水平安全区设备上，书源管理等子页顶栏右上角按钮被系统区域遮挡的问题。\n\n### 书源引擎与阅读体验\n- 全面提升阅读 3.0（Legado）书源发现页与搜索通用兼容性，支持宽松 JSON、嵌套脚本模板、`escape` 编码与 `bookUrlPattern` 详情重定向，修复聚合书源书名回归。\n- 包含 5 套全新内置主题套件（包豪斯、赛博霓虹、水墨丹青、莫奈花园、复古胶片）、「流韵意境」7 款翻页动效、阅读器右滑返回修复与云同步 V3 稳定性优化。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\n\n源码指纹：`bdc5dde61e0ffbe4bf7359092401fe331f0666ba`；冻结标签：`codex/frozen-261119053`。",
-          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.1.520%2B261119053/OrigoX-iOS-unsigned-3.1.520.ipa",
-          "size": 50697392
+          "version": "v3.2.0+261124004",
+          "date": "2026-11-24T09:17:45Z",
+          "localizedDescription": "# 会员与元知 AI 体系升级、全编码本地 TXT 引擎、书源秒开与跨端稳定性优化\n\n本次 `3.2.0` 全平台正式版汇总自 `3.1.520` 以来的核心功能升级、书源与本地阅读引擎重构以及跨端性能与稳定性优化：\n\n### 会员体系与元知 AI 升级\n- 会员体系精简统一为「普通版 + 高级版（Origo Premium）」；历史已购「开卷」权益的老用户免费自动直升「Origo 高级版」，无需补差或重新购买。\n- 正式接入元知 AI 月度订阅套餐（AI Plus / AI Pro / AI Max），支持一键订阅与恢复购买，全面开放旗舰模型推理、AI 分角色沉浸朗读、章节总结、更大共享云空间及阅读 Agent 书源编辑辅助能力；补齐 macOS StoreKit 2 原生桥接支持。\n\n### 本地阅读与全编码 TXT 引擎重构\n- 本地 TXT 与 EPUB 中文解码全面升级至完整 1/2/4 字节 `GB18030-2022`，新增 `UTF-32`（含/无 BOM）与 `Windows-1252` 支持；流式索引支持跨块安全解码与极少量残损字节容错恢复，彻底解决含 `0xA1 0x40` 等传统排版字符的大体积 TXT 无法打开问题。\n- 新增 `卷一` 等传统分卷章节目录识别；优化阅读器两端对齐跨页断段末行平摊，展开阅读控制栏期间自动锁定翻页/滚动防误触，从目录/书签/批注跳转后自动收起控制栏。\n\n### 书源秒开、Legado 3.0 兼容与 Android QuickJS 修复\n- 优化书源详情页目录/首章预热与后台 SWR 刷新链路，已缓存章节点击秒开不阻塞；扩展阅读 3.0（Legado）规则与脚本兼容（Java 内联正则 flags、`@@` HTML 模式、`+:regex`/`-:regex`、根数组 JSONPath、XPath 轴/谓词、`preUpdateJs`/`formatJs` 等）。\n- 修复 Android 书源 QuickJS 运行时因 `jsSetMemoryLimit` 符号未导出导致的发现页与脚本执行崩溃，改用原生 `JS_SetMemoryLimit` 内存上限控制。\n\n### 跨端性能、显存瘦身与稳定性加固\n- 加固 Android 12–16 下载与听书前台服务（FGS）异常防护与 `WebView` 初始化容错，移动端切入后台自动防抖释放可重建内存缓存，降低系统杀后台概率。\n- 优化 Android 平板 120Hz 刷新率匹配、首页卡片重绘隔离、液态玻璃着色器预热及冗余重绘消除；精简历史冗余打包资源，Android ARM64 安装包体积直降约 7.5 MB。\n- 完善 3D 书架滚动条对齐、全局触感反馈开关及 iPhone Duo 竖向导航栏与统计页适配。\n\n发布平台：android, ios, macos, linux, windows。\niOS IPA 未签名，需要自行签名后安装。\nmacOS 推荐下载 DMG，打开后将 Origo X 拖入 Applications（应用程序）；ZIP 保留为备用完整包。\nTestFlight：https://testflight.apple.com/join/zxGMgZ5X\n\n源码指纹：`e28b8e2a75c0db68413147d7b8daa3d2aec0948f`；冻结标签：`codex/frozen-261124004`。",
+          "downloadURL": "https://github.com/miloquinn/origo-x/releases/download/v3.2.0%2B261124004/OrigoX-iOS-unsigned-3.2.0.ipa",
+          "size": 44312341
         }
       ]
     },
