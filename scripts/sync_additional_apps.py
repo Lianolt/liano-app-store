@@ -48,7 +48,7 @@ def main():
         selected = None
         ipa = None
         for release in releases:
-            if release.get("draft") or release.get("prerelease"):
+            if release.get("draft"):
                 continue
             assets = [a for a in release.get("assets", []) if a.get("name", "").lower().endswith(".ipa")]
             if assets:
@@ -61,6 +61,8 @@ def main():
         tag = selected.get("tag_name") or selected.get("name") or "unknown"
         published = selected.get("published_at") or selected.get("created_at") or ""
         body = selected.get("body") or ""
+        if selected.get("prerelease"):
+            body = "⚠️ GitHub 预发行版本（非正式稳定版）\\n\\n" + body
         bundle_id = get_bundle_id(ipa["browser_download_url"], item["bundle"])
         metadata = {
             "name": item["name"],
