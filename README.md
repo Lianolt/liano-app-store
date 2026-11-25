@@ -1,185 +1,33 @@
-一个面向 iOS 侧载用户的第三方 IPA 软件源，适用于 全能签、Feather、SideStore / AltStore 类客户端。
+# Liano's iPA Source
 
-本仓库主要收录开源项目及第三方 iOS 应用的 IPA 安装包，并通过 GitHub Releases 自动同步应用版本、更新日志、文件大小和下载地址。
+面向 iOS 侧载用户的第三方 IPA 软件源，收录开源项目及第三方应用。
 
-⸻
+## 添加软件源
 
-📱 软件源信息
+- **名称：** Liano's ipasource
+- **Identifier：** `com.Lianolt.ipasource`
+- **软件源地址：**  
+  `https://raw.githubusercontent.com/Lianolt/liano-app-store/main/apps.json`
+- **总图标：**  
+  `https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/AppStore.jpg`
 
-名称： Liano’s ipasource
+将软件源地址添加到支持自定义源的侧载客户端即可。
 
-Identifier：
+## 自动更新
 
-com.happier1125.ipasource
+GitHub Actions 每天自动同步两次，也支持手动运行。
 
-软件源地址：
+同步范围包括正式版和预发行版；跳过 Draft，并选择最新的、包含 IPA 文件的 Release。自动更新版本号、更新日志、下载地址及 IPA 文件大小。
 
-https://raw.githubusercontent.com/happier1125/liano-app-store/main/apps.json
+## 仓库结构
 
-将上面的 apps.json 地址添加到支持自定义软件源的 IPA 签名/侧载工具即可。
+- `apps.json`：软件源数据。
+- `appicon/`：软件源及应用图标。
+- `scripts/sync_additional_apps.py`：Release 同步脚本。
+- `.github/workflows/sync-all.yml`：自动同步工作流。
 
-⸻
+## 免责声明
 
-🔗 数据来源
+本仓库仅整理并提供公开项目的 IPA 下载信息，不拥有所收录应用的代码、商标或版权。相关权利归原作者所有，请遵守项目许可证及所在地法律法规。
 
-本软件源中的应用版本信息主要来自对应项目的 GitHub Releases。
-
-应用项目：
-
-* PiliPlus
-* Feather
-* PvZ Hybrid
-* Kazumi
-* Gopeed
-* TiebaPure
-* Cilicili
-* MeloX
-* Open Reading
-* Pixiv-SwiftUI
-
-应用的具体版权、许可证及开发者权益均归原项目作者所有。
-
-⸻
-
-🔄 自动更新机制
-
-本软件源使用 GitHub Actions 自动同步应用更新。
-
-工作流文件：
-
-.github/workflows/sync-all.yml
-
-默认每天自动运行 2 次，同时支持在 GitHub Actions 中手动运行。
-
-同步内容
-
-每次同步会从对应项目的 GitHub Releases 获取最新 Release，并自动更新：
-
-* version — 最新版本号
-* versionDate — Release 发布时间
-* versionDescription — Release 更新日志
-* downloadURL — IPA 官方下载地址
-* size — IPA 实际文件大小（Bytes）
-* versions — 应用版本信息
-
-⸻
-
-📦 IPA 文件筛选
-
-为了避免 GitHub Release 中存在多个平台文件导致错误下载，本仓库的自动同步脚本会优先筛选：
-
-.ipa
-
-只有 Release Assets 中的 IPA 文件才会被作为 iOS 安装包写入软件源。
-
-例如一个 Release 同时存在：
-
-Android APK
-Windows EXE
-macOS DMG
-Linux Package
-iOS IPA
-
-同步脚本只会选择 IPA。
-
-这样可以避免侧载工具获取到错误的平台安装包。
-
-⸻
-
-🗂️ 仓库结构
-
-liano-app-store/
-│
-├── .github/
-│   └── workflows/
-│       └── sync-all.yml
-│
-├── appicon/
-│   ├── User.jpeg
-│   ├── Feather.png
-│   ├── PVZH.png
-│   ├── Kazumi.jpeg
-│   ├── Gopeed.png
-│   ├── TiebaPure.jpg
-│   ├── Cilicili.png
-│   ├── Melox.png
-│   ├── Open-Reading.png
-│   └── Pixiv-SwiftUI.PNG
-│
-├── apps.json
-│
-└── README.md
-
-apps.json
-
-软件源核心数据文件。
-
-其中包含软件源基本信息以及所有应用的版本、描述、图标、下载地址和文件大小等信息。
-
-appicon/
-
-存放软件源中应用使用的图标。
-
-.github/workflows/sync-all.yml
-
-GitHub Actions 自动同步脚本。
-
-⸻
-
-➕ 添加新的应用
-
-如果希望向软件源添加新的应用，需要准备：
-
-1. 应用名称
-2. GitHub Releases 地址
-3. 应用图标
-4. 对应的 iOS IPA Release
-
-推荐应用项目具有公开的 GitHub Releases，并且 Release 中提供 .ipa 文件。
-
-添加应用后，在 apps.json 中增加对应的应用信息，并在：
-
-.github/workflows/sync-all.yml
-
-中增加对应的自动同步任务。
-
-之后 GitHub Actions 会负责自动更新版本信息。
-
-⸻
-
-⚠️ 免责声明
-
-本仓库只是一个第三方 IPA 软件源，不开发、不修改、不拥有所收录应用的源代码及版权。
-
-本仓库提供的 IPA 下载地址原则上指向对应项目的公开 GitHub Releases。
-
-使用本软件源所产生的任何问题，包括但不限于：
-
-* IPA 安装失败
-* 应用闪退
-* 证书失效
-* 应用无法启动
-* 应用版本兼容性问题
-* 原项目停止维护
-* GitHub Release 被删除
-* 开发者撤回 IPA
-
-均需要以对应应用项目及其开发者的说明为准。
-
-请遵守所在地法律法规以及相关软件的许可证协议。
-
-如果某个项目作者希望从本软件源移除其应用，请提交 Issue 或联系仓库维护者。
-
-⸻
-
-📄 License
-
-本仓库的软件源配置文件及自动化脚本采用仓库实际声明的许可证。
-
-本仓库收录的软件、图标及相关项目资源，其版权和许可证归各自原作者所有。
-
-⸻
-
-<p align="center">
-  Made with ❤️ by Liano
-</p>
+如需移除相关项目，请提交 Issue。
