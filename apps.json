@@ -3,6 +3,7 @@
   "identifier": "com.Lianolt.ipasource",
   "sourceURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/apps.json",
   "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/AppStoreIcon.png",
+  "sourceicon": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/AppStoreIcon.png",
   "apps": [
     {
       "name": "PiliPlus",
@@ -466,6 +467,5 @@
         }
       ]
     }
-  ],
-  "sourceicon": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/AppStoreIcon.png"
+  ]
 }
