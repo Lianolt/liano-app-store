@@ -62,7 +62,7 @@ def main():
         published = selected.get("published_at") or selected.get("created_at") or ""
         body = selected.get("body") or ""
         if selected.get("prerelease"):
-            body = "⚠️ GitHub 预发行版本（非正式稳定版）\\n\\n" + body
+            body = "⚠️ GitHub 预发行版本（非正式稳定版）\n\n" + body
         bundle_id = get_bundle_id(ipa["browser_download_url"], item["bundle"])
         metadata = {
             "name": item["name"],
