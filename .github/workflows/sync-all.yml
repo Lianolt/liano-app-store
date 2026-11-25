@@ -112,7 +112,7 @@ jobs:
       - name: Sync Melox
         run: |
           set -euo pipefail
-          curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/youshen2/MeloX/releases/latest > release_7.json
+          if ! curl -fsSL --retry 3 --retry-delay 2 https://api.github.com/repos/youshen2/MeloX/releases/latest > release_7.json; then echo 'Melox: GitHub Releases API 暂时不可用，保留现有版本并继续'; exit 0; fi
           IPA_URL=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .browser_download_url][0] // empty' release_7.json)
           IPA_SIZE=$(jq -r '[.assets[] | select(.name | ascii_downcase | endswith(".ipa")) | .size][0] // empty' release_7.json)
           TAG_NAME=$(jq -r '.tag_name // empty' release_7.json)
