@@ -1,17 +1,39 @@
 #!/usr/bin/env python3
-"""Sync additional IPA apps from stable GitHub Releases into apps.json."""
+"""Sync every app in apps.json from GitHub Releases, including prereleases.
+
+Selection rules:
+- Ignore draft releases only.
+- Accept both stable and prerelease releases.
+- Select the newest release that actually contains an IPA asset.
+- Paginate the Releases API so repositories with more than 100 releases are covered.
+- Keep existing app metadata (bundle ID, icon, localized description) intact.
+"""
 import json
 import os
-import plistlib
-import tempfile
+import time
+import urllib.error
 import urllib.request
-import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APPS_FILE = os.path.join(ROOT, "apps.json")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
-APPS = [
+# Existing source apps and their canonical GitHub repositories.
+REPOSITORIES = {
+    "PiliPlus": "bggRGjQaUbCoE/PiliPlus",
+    "Feather": "CLARATION/Feather",
+    "PvZ Hybrid": "Dey410/PvZ-Hybrid-For-iOS",
+    "Kazumi": "Predidit/Kazumi",
+    "Gopeed": "GopeedLab/gopeed",
+    "TiebaPure": "infinityf4p/TiebaPure-iOS",
+    "Cilicili": "Rone89/cilicili",
+    "Melox": "youshen2/MeloX",
+    "Open Reading": "miloquinn/origo-x",
+    "Pixiv-SwiftUI": "Eslzzyl/Pixiv-SwiftUI",
+}
+
+# Apps added to the source in November 2026.
+ADDITIONAL_APPS = [
     {"name":"短剧之家","repo":"jackherex/duanjuzhijia-down-ios","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/duanjuzhijia.png","description":"短剧之家 iOS 客户端，提供短剧内容浏览与观看。","bundle":"com.duanju.duanjuapp.v2"},
     {"name":"GuoDuo","repo":"81199000/GuoDuo","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/GuoDuo.png","description":"GuoDuo iOS 客户端。","bundle":"me.rrmm.hongguo"},
     {"name":"iBuilder","repo":"Absenti/iBuilder","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/ibuilder.png","description":"在 iPhone 上将自己拥有的 Nintendo Switch 游戏构建为原生 iOS 应用；不包含游戏、密钥或固件。","bundle":"dev.ibuilder.app"},
@@ -25,76 +47,128 @@ APPS = [
     {"name":"itchPocket","repo":"Liano1125/Itch","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/itchPocket.PNG","description":"itchPocket：管理 itch.io 游戏库、作者动态与 Ren’Py 游戏的 iOS 应用。","bundle":"com.liano.itchPocket"},
 ]
 
-def request_json(url):
-    headers = {"Accept":"application/vnd.github+json", "User-Agent":"Liano-iPASource-Sync"}
+def request_json(url, attempts=4):
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "Liano-iPASource-Sync",
+    }
     if TOKEN:
         headers["Authorization"] = "Bearer " + TOKEN
-    req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req, timeout=60) as response:
-        return json.load(response)
+    for attempt in range(attempts):
+        req = urllib.request.Request(url, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (403, 429, 500, 502, 503, 504) or attempt == attempts - 1:
+                raise
+            retry_after = int(exc.headers.get("Retry-After", "0") or "0")
+            time.sleep(max(retry_after, 2 ** attempt))
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == attempts - 1:
+                raise
+            time.sleep(2 ** attempt)
+    raise RuntimeError("GitHub API request failed after retries: " + url)
 
-def get_bundle_id(asset_url, fallback):
-    # Bundle identifiers were read from the IPA Info.plist during the initial import.
-    # Reuse the verified value so scheduled runs do not redownload large IPA files.
-    return fallback
+def newest_release_with_ipa(repo):
+    page = 1
+    while True:
+        url = f"https://api.github.com/repos/{repo}/releases?per_page=100&page={page}"
+        releases = request_json(url)
+        if not isinstance(releases, list):
+            raise RuntimeError(f"Unexpected Releases API response for {repo}: {releases}")
+        for release in releases:
+            if release.get("draft"):
+                continue
+            ipa_assets = [
+                asset for asset in release.get("assets", [])
+                if asset.get("name", "").lower().endswith(".ipa")
+                and asset.get("browser_download_url")
+                and int(asset.get("size") or 0) > 0
+            ]
+            if ipa_assets:
+                return release, ipa_assets[0]
+        if len(releases) < 100:
+            return None, None
+        page += 1
 
 def main():
     with open(APPS_FILE, "r", encoding="utf-8") as f:
         source = json.load(f)
-    existing = {a.get("name"): a for a in source.get("apps", [])}
 
-    for item in APPS:
-        releases = request_json("https://api.github.com/repos/" + item["repo"] + "/releases?per_page=100")
-        selected = None
-        ipa = None
-        for release in releases:
-            if release.get("draft"):
-                continue
-            assets = [a for a in release.get("assets", []) if a.get("name", "").lower().endswith(".ipa")]
-            if assets:
-                selected, ipa = release, assets[0]
-                break
-        if not selected:
-            print("SKIP", item["name"], "- no stable Release IPA found")
+    apps = source.get("apps", [])
+    by_name = {app.get("name"): app for app in apps}
+    missing = [name for name in REPOSITORIES if name not in by_name]
+    if missing:
+        raise RuntimeError("Repository mapping refers to missing apps.json entries: " + ", ".join(missing))
+
+    manifests = []
+    for name, repo in REPOSITORIES.items():
+        manifests.append({"name": name, "repo": repo, "bundle": None, "icon": None, "description": None})
+    manifests.extend(ADDITIONAL_APPS)
+
+    synced = 0
+    skipped = []
+    for item in manifests:
+        name, repo = item["name"], item["repo"]
+        current = by_name.get(name)
+        if current is None:
+            current = {
+                "name": name,
+                "bundleIdentifier": item.get("bundle") or "",
+                "developerName": repo.split("/")[0],
+                "localizedDescription": item.get("description") or "",
+                "iconURL": item.get("icon") or "",
+                "tintColor": "#000000",
+            }
+            apps.append(current)
+            by_name[name] = current
+
+        release, ipa = newest_release_with_ipa(repo)
+        if release is None:
+            print(f"SKIP {name}: no non-draft Release with an IPA asset; preserving current metadata")
+            skipped.append(name)
             continue
 
-        tag = selected.get("tag_name") or selected.get("name") or "unknown"
-        published = selected.get("published_at") or selected.get("created_at") or ""
-        body = selected.get("body") or ""
-        if selected.get("prerelease"):
-            body = "⚠️ GitHub 预发行版本（非正式稳定版）\n\n" + body
-        bundle_id = get_bundle_id(ipa["browser_download_url"], item["bundle"])
-        metadata = {
-            "name": item["name"],
-            "bundleIdentifier": bundle_id,
-            "developerName": item["repo"].split("/")[0],
+        tag = release.get("tag_name") or release.get("name") or "unknown"
+        published = release.get("published_at") or release.get("created_at") or ""
+        notes = release.get("body") or ""
+        if release.get("prerelease"):
+            notes = "⚠️ GitHub 预发行版本（非正式稳定版）\n\n" + notes
+
+        # Preserve stable app identity and presentation metadata from apps.json.
+        current.update({
+            "name": name,
+            "bundleIdentifier": current.get("bundleIdentifier") or item.get("bundle") or "",
+            "developerName": current.get("developerName") or repo.split("/")[0],
             "version": tag,
             "versionDate": published,
-            "versionDescription": body,
-            "localizedDescription": item["description"],
+            "versionDescription": notes,
+            "localizedDescription": current.get("localizedDescription") or item.get("description") or "",
             "downloadURL": ipa["browser_download_url"],
-            "iconURL": item["icon"],
-            "tintColor": "#000000",
+            "iconURL": current.get("iconURL") or item.get("icon") or "",
+            "tintColor": current.get("tintColor") or "#000000",
             "size": int(ipa["size"]),
             "versions": [{
                 "version": tag,
                 "date": published,
-                "localizedDescription": body,
+                "localizedDescription": notes,
                 "downloadURL": ipa["browser_download_url"],
-                "size": int(ipa["size"])
-            }]
-        }
-        if item["name"] in existing:
-            idx = source["apps"].index(existing[item["name"]])
-            source["apps"][idx] = metadata
-        else:
-            source.setdefault("apps", []).append(metadata)
-        existing[item["name"]] = metadata
-        print("SYNC", item["name"], tag, ipa["name"], ipa["size"], "bytes")
+                "size": int(ipa["size"]),
+            }],
+        })
+        channel = "预发行" if release.get("prerelease") else "正式版"
+        print(f"SYNC {name}: {tag} [{channel}] {ipa['name']} {ipa['size']} bytes")
+        synced += 1
 
     with open(APPS_FILE, "w", encoding="utf-8") as f:
         json.dump(source, f, ensure_ascii=False, indent=2)
         f.write("\n")
+
+    print(f"Release IPA sync complete: {synced}/{len(manifests)} apps updated")
+    if skipped:
+        print("Apps without an eligible IPA Release: " + ", ".join(skipped))
 
 if __name__ == "__main__":
     main()
