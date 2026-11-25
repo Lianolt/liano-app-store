@@ -228,21 +228,21 @@
       "name": "短剧之家",
       "bundleIdentifier": "com.duanju.duanjuapp.v2",
       "developerName": "jackherex",
-      "version": "ios-app-v4.6.86-265",
-      "versionDate": "2026-11-25T04:24:42Z",
-      "versionDescription": "- 修复：播放接口失效问题，恢复全量剧集正常播放\n- 新增：AI 语音助手（支持云端搜剧、找剧、热榜/猜你喜欢查询与语音播控）\n- 优化：页面切换流畅度全面提升，首页与各页签切换不再卡顿；保留 iOS 26 原生 Liquid Glass 底部导航栏\n- 优化：WebDAV 云端同步提速并新增同步设备管理，封面与目录缓存策略优化\n- 修复：弹幕渲染掉帧卡顿、平板横屏适配与红果登录滑块验证\n",
+      "version": "ios-app-v4.6.87-266-beta",
+      "versionDate": "2026-11-25T05:52:05Z",
+      "versionDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n- 新增：iOS 端小智 AI 完整双向语音（内置 Xiph libopus 编解码，支持「按住说话」、持续「打电话」通话模式与小智语音回复播报）\n- 修复：iOS 端「按住说话 / 打电话」按钮无法点击、打字回复无语音播报以及上滑取消与弹窗手势冲突的问题\n- 修复：红果综合搜索接口分页参数变更导致搜不到剧的问题\n- 提示：首次语音对话请在系统弹窗中授予麦克风权限\n",
       "localizedDescription": "短剧之家 iOS 客户端，提供短剧内容浏览与观看。",
-      "downloadURL": "https://github.com/jackherex/duanjuzhijia-down-ios/releases/download/ios-app-v4.6.86-265/duanjuzhijia2-4.6.86%2B265-ios-unsigned.ipa",
+      "downloadURL": "https://github.com/jackherex/duanjuzhijia-down-ios/releases/download/ios-app-v4.6.87-266-beta/duanjuzhijia2-4.6.87%2B266-ios-unsigned.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/duanjuzhijia.png",
       "tintColor": "#000000",
-      "size": 43812307,
+      "size": 44082566,
       "versions": [
         {
-          "version": "ios-app-v4.6.86-265",
-          "date": "2026-11-25T04:24:42Z",
-          "localizedDescription": "- 修复：播放接口失效问题，恢复全量剧集正常播放\n- 新增：AI 语音助手（支持云端搜剧、找剧、热榜/猜你喜欢查询与语音播控）\n- 优化：页面切换流畅度全面提升，首页与各页签切换不再卡顿；保留 iOS 26 原生 Liquid Glass 底部导航栏\n- 优化：WebDAV 云端同步提速并新增同步设备管理，封面与目录缓存策略优化\n- 修复：弹幕渲染掉帧卡顿、平板横屏适配与红果登录滑块验证\n",
-          "downloadURL": "https://github.com/jackherex/duanjuzhijia-down-ios/releases/download/ios-app-v4.6.86-265/duanjuzhijia2-4.6.86%2B265-ios-unsigned.ipa",
-          "size": 43812307
+          "version": "ios-app-v4.6.87-266-beta",
+          "date": "2026-11-25T05:52:05Z",
+          "localizedDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n- 新增：iOS 端小智 AI 完整双向语音（内置 Xiph libopus 编解码，支持「按住说话」、持续「打电话」通话模式与小智语音回复播报）\n- 修复：iOS 端「按住说话 / 打电话」按钮无法点击、打字回复无语音播报以及上滑取消与弹窗手势冲突的问题\n- 修复：红果综合搜索接口分页参数变更导致搜不到剧的问题\n- 提示：首次语音对话请在系统弹窗中授予麦克风权限\n",
+          "downloadURL": "https://github.com/jackherex/duanjuzhijia-down-ios/releases/download/ios-app-v4.6.87-266-beta/duanjuzhijia2-4.6.87%2B266-ios-unsigned.ipa",
+          "size": 44082566
         }
       ]
     },
@@ -404,21 +404,65 @@
       "name": "HGhubX",
       "bundleIdentifier": "com.hghubx.app",
       "developerName": "zxsos",
-      "version": "v2.2.10",
-      "versionDate": "2026-11-24T10:16:05Z",
-      "versionDescription": "# HGhubX v2.2.10\n\n紧急适配上游全新 `dx150-edge-v1` 四作用域加密网关修复全接口 503，并合入标签置顶、右半屏长按倍速胶囊、搜索页热门标签官网同步、网络切换静默恢复、完结剧集「全 N 集」与窄屏布局修复；覆盖 Windows、macOS、Linux、Android 与 iOS 标准版。\n\n## 新增与优化\n1. **标签页长按置顶与标签结果页标题栏置顶（#247、#252）**：在「分类 → 标签」顶部新增「置顶标签」板块，支持长按标签 600ms 切换置顶/取消（最多 24 个，横向拖动超过 10px 取消防误触）；进入任意标签结果页后，标题栏右侧新增图钉按钮一键置顶（已置顶朝下扎稳并高亮），状态保存在内容偏好 `pinnedTags` 并跨重启保留。\n2. **移动端右半屏长按倍速与顶部只读胶囊提示（#247、#251）**：长按手势取消对角线斜切与居中死区，改为直觉的左右半屏切分（右半屏 `2×` 倍速、左半屏 `0.5×` 慢放，起手延迟缩至 `260ms`，横滑 `68px` 换挡，松手即恢复不锁定）；长按激活期间在安全区顶部居中显示无 `backdrop-filter` 的只读倍速胶囊与挡位点，清屏模式下也有清晰视觉反馈。\n3. **搜索结果 / 分类 / 标签卡片完结剧集显示「全 N 集」（#248）**：已完结剧目在海报底部集数角标统一显示「全 N 集」（优先取 `total_episodes`，缺失时回退 `episode_count`），未完结剧目保持原有更新集数文案。\n\n## 修复\n1. **适配上游 `dx150-edge-v1` 四作用域加密网关，修复接口全 503（#255、#256）**：上游于 2026-11-24 下线旧统一入口 `/api/edge/request`（返回 `HTTP 503 {\"msg\":\"接口已停用\"}`）并拆分为 `/api/{public,dynamic,playback,user}/request`；客户端新增 `edge_crypto` 模块复用 `ring` 实现 ECDH P-256 + HKDF-SHA256 + AES-256-GCM 单飞会话加解密、`public` 作用域 `X-HG-Public-JSON: 1` 快速路径与 `session_expired` 自动重建，同时对未迁移镜像保留旧接口 `404`/`405` 兼容回退，并同步更新草稿代理连通性探测。\n2. **搜索页热门题材与官网首页「热门标签」同步（#250、#254）**：新增 `api_hot_tags` 直接解析官网首页 SSR `section.hg-home-popular-tags`，搜索页严格按官网热门标签集合与顺序展示，移除前端全量 `/api/tags` 重排，点「换一批」不再混入非热门普通标签，保留内容屏蔽过滤与手动刷新同步。\n3. **网络切换误报 401 与静默恢复（#246）**：修复 `edge.rs` 将 HTTP 403 折叠为 `401` 导致切网后误报登录态失效的问题；网络恢复挂起并在回到前台时强制重建客户端与自动选线，跨镜像静默重登按需刷新发布页信任，瞬时失败不再永久锁死同步，不可恢复时去重提示并提供原地「重新登录」入口。\n4. **窄屏手机中英文控件异常折行与裁切（#249）**：收紧 360px / 320px 窄屏容器下「我的关注」「我的主页」「最近上新」「热门推荐」、账号卡 `ID` 与统计行、设置页分段器及海报角标间距，修复中文两字断行与英文按字母切碎/裁切问题。\n\n## 安装与兼容提示\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb`；Android 标准版按 ABI 提供已签名 APK（`versionCode=2002010`）；iOS 提供未签名 `.ipa`（需自行签名安装）。\n- 覆盖安装保留本机收藏、观看记录、界面语言、线路与内容偏好；Android TV 版（`com.hghubx.tv`）同步发布 `tv-v2.2.5` 修复上游 503。\n\n## 致谢\n- 感谢 @makisekurisu-jp 贡献 #248 完结剧集「全 N 集」展示、#252 标签页与标签结果页置顶功能，以及 #250 搜索页热门标签不同步的根因定位与建议。\n- 感谢 @zxsos 完成 #256 上游 `dx150-edge-v1` 加密网关紧急适配、#246 网络切换静默恢复、#249 窄屏中英文布局修复、#251 移动端右半屏长按倍速胶囊与 #254 搜索页热门标签同步。\n- 感谢 `enjue` 提出 #247 常用标签快速入口与长按倍速提示反馈。\n\n## 验证\n- 合入后本地严检：`make check`（Rust `124 passed; 0 failed; 5 ignored`、`pnpm build` 三套 `tsc` + Vite 构建、827 项 i18n 键校验、226 条文档链接、代码尺寸预算及 `release-check: ok 2.2.10, android versionCode=2002010`）、`pnpm test:smoke`（18/18 套件通过）、`node scripts/test-tag-pins.mjs`（11 项通过）与 `make test-tv` + `node scripts/test-tv-remote.mjs`（14/14 场景通过）全部通过。\n- 实网四作用域联调（`cargo test --lib edge_crypto::tests::live_dx150_edge_all_four_scopes -- --ignored` 对 `https://huangguoai.com`）：`public`、`dynamic`、`playback`、`user` 四个加密通道均握手与加解密通过。\n- PR #246、#248、#249、#251、#252、#254、#256 均在 GitHub Actions 审查检查（8/8）全绿通过后合入；各平台正式产物由 `v2.2.10` 标签触发的 GitHub Actions `Release` 工作流构建并校验。\n",
+      "version": "test-pre",
+      "versionDate": "2026-11-21T16:49:36Z",
+      "versionDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n# HGhubX Test Preview\n\n基于 `main`（`6370c44`）自动合成的全平台预览构建（更新时间：`2026-11-25T09:32:45Z`，测试提交：`c823475`）。\n> 此预发布仅供功能尝鲜与真机回归验证，不抢占正式版 Latest，也不会触发正式版客户端自动更新提示。\n\n## 本次已合入的测试 PR（5）\n1. #259 feat(feed): unify hold-speed rail across 0.5x to 6x for seamless transitions（@zxsos，`fad6c8d`）\n2. #260 修复标签置顶与帖子点赞/收藏提示堆叠，统一动作提示单槽（@makisekurisu-jp，`e15aeb2`）\n3. #262 feat: 搜索页热门作者、作者主页筛选排序与分类作者入口（@makisekurisu-jp，`3ac6d71`）\n4. #267 fix: 搜索页热门标签改为每批 10 条（@makisekurisu-jp，`fa22328`）\n5. #268 fix: 移除视频卡片「完结」角标（@makisekurisu-jp，`4d5018e`）\n\n## 自动跳过的 PR（1）\n- #263 feat: 标签结果页按连载状态筛选（@makisekurisu-jp）：与当前测试基线存在代码冲突，已跳过\n",
       "localizedDescription": "HGhubX iOS 客户端。",
-      "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v2.2.10/HGhubX_2.2.10_ios.ipa",
+      "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/test-pre/HGhubX_2.2.10_ios.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/HGhubX.png",
       "tintColor": "#000000",
-      "size": 4048150,
+      "size": 4166225,
       "versions": [
         {
-          "version": "v2.2.10",
-          "date": "2026-11-24T10:16:05Z",
-          "localizedDescription": "# HGhubX v2.2.10\n\n紧急适配上游全新 `dx150-edge-v1` 四作用域加密网关修复全接口 503，并合入标签置顶、右半屏长按倍速胶囊、搜索页热门标签官网同步、网络切换静默恢复、完结剧集「全 N 集」与窄屏布局修复；覆盖 Windows、macOS、Linux、Android 与 iOS 标准版。\n\n## 新增与优化\n1. **标签页长按置顶与标签结果页标题栏置顶（#247、#252）**：在「分类 → 标签」顶部新增「置顶标签」板块，支持长按标签 600ms 切换置顶/取消（最多 24 个，横向拖动超过 10px 取消防误触）；进入任意标签结果页后，标题栏右侧新增图钉按钮一键置顶（已置顶朝下扎稳并高亮），状态保存在内容偏好 `pinnedTags` 并跨重启保留。\n2. **移动端右半屏长按倍速与顶部只读胶囊提示（#247、#251）**：长按手势取消对角线斜切与居中死区，改为直觉的左右半屏切分（右半屏 `2×` 倍速、左半屏 `0.5×` 慢放，起手延迟缩至 `260ms`，横滑 `68px` 换挡，松手即恢复不锁定）；长按激活期间在安全区顶部居中显示无 `backdrop-filter` 的只读倍速胶囊与挡位点，清屏模式下也有清晰视觉反馈。\n3. **搜索结果 / 分类 / 标签卡片完结剧集显示「全 N 集」（#248）**：已完结剧目在海报底部集数角标统一显示「全 N 集」（优先取 `total_episodes`，缺失时回退 `episode_count`），未完结剧目保持原有更新集数文案。\n\n## 修复\n1. **适配上游 `dx150-edge-v1` 四作用域加密网关，修复接口全 503（#255、#256）**：上游于 2026-11-24 下线旧统一入口 `/api/edge/request`（返回 `HTTP 503 {\"msg\":\"接口已停用\"}`）并拆分为 `/api/{public,dynamic,playback,user}/request`；客户端新增 `edge_crypto` 模块复用 `ring` 实现 ECDH P-256 + HKDF-SHA256 + AES-256-GCM 单飞会话加解密、`public` 作用域 `X-HG-Public-JSON: 1` 快速路径与 `session_expired` 自动重建，同时对未迁移镜像保留旧接口 `404`/`405` 兼容回退，并同步更新草稿代理连通性探测。\n2. **搜索页热门题材与官网首页「热门标签」同步（#250、#254）**：新增 `api_hot_tags` 直接解析官网首页 SSR `section.hg-home-popular-tags`，搜索页严格按官网热门标签集合与顺序展示，移除前端全量 `/api/tags` 重排，点「换一批」不再混入非热门普通标签，保留内容屏蔽过滤与手动刷新同步。\n3. **网络切换误报 401 与静默恢复（#246）**：修复 `edge.rs` 将 HTTP 403 折叠为 `401` 导致切网后误报登录态失效的问题；网络恢复挂起并在回到前台时强制重建客户端与自动选线，跨镜像静默重登按需刷新发布页信任，瞬时失败不再永久锁死同步，不可恢复时去重提示并提供原地「重新登录」入口。\n4. **窄屏手机中英文控件异常折行与裁切（#249）**：收紧 360px / 320px 窄屏容器下「我的关注」「我的主页」「最近上新」「热门推荐」、账号卡 `ID` 与统计行、设置页分段器及海报角标间距，修复中文两字断行与英文按字母切碎/裁切问题。\n\n## 安装与兼容提示\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb`；Android 标准版按 ABI 提供已签名 APK（`versionCode=2002010`）；iOS 提供未签名 `.ipa`（需自行签名安装）。\n- 覆盖安装保留本机收藏、观看记录、界面语言、线路与内容偏好；Android TV 版（`com.hghubx.tv`）同步发布 `tv-v2.2.5` 修复上游 503。\n\n## 致谢\n- 感谢 @makisekurisu-jp 贡献 #248 完结剧集「全 N 集」展示、#252 标签页与标签结果页置顶功能，以及 #250 搜索页热门标签不同步的根因定位与建议。\n- 感谢 @zxsos 完成 #256 上游 `dx150-edge-v1` 加密网关紧急适配、#246 网络切换静默恢复、#249 窄屏中英文布局修复、#251 移动端右半屏长按倍速胶囊与 #254 搜索页热门标签同步。\n- 感谢 `enjue` 提出 #247 常用标签快速入口与长按倍速提示反馈。\n\n## 验证\n- 合入后本地严检：`make check`（Rust `124 passed; 0 failed; 5 ignored`、`pnpm build` 三套 `tsc` + Vite 构建、827 项 i18n 键校验、226 条文档链接、代码尺寸预算及 `release-check: ok 2.2.10, android versionCode=2002010`）、`pnpm test:smoke`（18/18 套件通过）、`node scripts/test-tag-pins.mjs`（11 项通过）与 `make test-tv` + `node scripts/test-tv-remote.mjs`（14/14 场景通过）全部通过。\n- 实网四作用域联调（`cargo test --lib edge_crypto::tests::live_dx150_edge_all_four_scopes -- --ignored` 对 `https://huangguoai.com`）：`public`、`dynamic`、`playback`、`user` 四个加密通道均握手与加解密通过。\n- PR #246、#248、#249、#251、#252、#254、#256 均在 GitHub Actions 审查检查（8/8）全绿通过后合入；各平台正式产物由 `v2.2.10` 标签触发的 GitHub Actions `Release` 工作流构建并校验。\n",
-          "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v2.2.10/HGhubX_2.2.10_ios.ipa",
-          "size": 4048150
+          "version": "test-pre",
+          "date": "2026-11-21T16:49:36Z",
+          "localizedDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n# HGhubX Test Preview\n\n基于 `main`（`6370c44`）自动合成的全平台预览构建（更新时间：`2026-11-25T09:32:45Z`，测试提交：`c823475`）。\n> 此预发布仅供功能尝鲜与真机回归验证，不抢占正式版 Latest，也不会触发正式版客户端自动更新提示。\n\n## 本次已合入的测试 PR（5）\n1. #259 feat(feed): unify hold-speed rail across 0.5x to 6x for seamless transitions（@zxsos，`fad6c8d`）\n2. #260 修复标签置顶与帖子点赞/收藏提示堆叠，统一动作提示单槽（@makisekurisu-jp，`e15aeb2`）\n3. #262 feat: 搜索页热门作者、作者主页筛选排序与分类作者入口（@makisekurisu-jp，`3ac6d71`）\n4. #267 fix: 搜索页热门标签改为每批 10 条（@makisekurisu-jp，`fa22328`）\n5. #268 fix: 移除视频卡片「完结」角标（@makisekurisu-jp，`4d5018e`）\n\n## 自动跳过的 PR（1）\n- #263 feat: 标签结果页按连载状态筛选（@makisekurisu-jp）：与当前测试基线存在代码冲突，已跳过\n",
+          "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/test-pre/HGhubX_2.2.10_ios.ipa",
+          "size": 4166225
+        }
+      ]
+    },
+    {
+      "name": "i 短剧",
+      "bundleIdentifier": "com.local.STV",
+      "developerName": "my-name-is-alan",
+      "version": "v1.6b36-pipfix",
+      "versionDate": "2026-11-25T06:06:26Z",
+      "versionDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n### 更新内容\n\n- 新增红果站源搜索关键词联想功能（防抖、取消旧请求、点击直接进入剧集详情页）及首页搜索来源透传（#35）。\n- 修复搜索页返回时重置已切换站源、联想列表键盘弹出不可滚动及首尾空格处理问题。\n- 默认播放内核改回系统播放器（`AVPlayer`），恢复所有剧集原生画中画（小窗）播放；如需杜比视界/DTS/ASS 字幕仍可在「我的 → 片源管理」手动切换为 MPVKit。\n\n包内版本为 1.6 build 36，直接发布已验证产物。IPA 未签名，最低 iOS 18，请自行重签侧载。\n\n构建源码：585a3d654253422981a93b7a4f948697ffae458b\n构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45554380076\n",
+      "localizedDescription": "i 短剧 iOS 客户端。",
+      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b36-pipfix/STV-1.6b36-unsigned.ipa",
+      "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/iDuanju.png",
+      "tintColor": "#000000",
+      "size": 47462734,
+      "versions": [
+        {
+          "version": "v1.6b36-pipfix",
+          "date": "2026-11-25T06:06:26Z",
+          "localizedDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n### 更新内容\n\n- 新增红果站源搜索关键词联想功能（防抖、取消旧请求、点击直接进入剧集详情页）及首页搜索来源透传（#35）。\n- 修复搜索页返回时重置已切换站源、联想列表键盘弹出不可滚动及首尾空格处理问题。\n- 默认播放内核改回系统播放器（`AVPlayer`），恢复所有剧集原生画中画（小窗）播放；如需杜比视界/DTS/ASS 字幕仍可在「我的 → 片源管理」手动切换为 MPVKit。\n\n包内版本为 1.6 build 36，直接发布已验证产物。IPA 未签名，最低 iOS 18，请自行重签侧载。\n\n构建源码：585a3d654253422981a93b7a4f948697ffae458b\n构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45554380076\n",
+          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b36-pipfix/STV-1.6b36-unsigned.ipa",
+          "size": 47462734
+        }
+      ]
+    },
+    {
+      "name": "itchPocket",
+      "bundleIdentifier": "com.liano.itchPocket",
+      "developerName": "Liano1125",
+      "version": "nightly",
+      "versionDate": "2026-11-06T15:03:22Z",
+      "versionDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n此版本由 GitHub Actions 自动构建。\nIPA 为未签名构建产物，安装前需要自行签名。\n",
+      "localizedDescription": "itchPocket：管理 itch.io 游戏库、作者动态与 Ren’Py 游戏的 iOS 应用。",
+      "downloadURL": "https://github.com/Liano1125/Itch/releases/download/nightly/itchPocket-unsigned.ipa",
+      "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/itchPocket.PNG",
+      "tintColor": "#000000",
+      "size": 1883062,
+      "versions": [
+        {
+          "version": "nightly",
+          "date": "2026-11-06T15:03:22Z",
+          "localizedDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n此版本由 GitHub Actions 自动构建。\nIPA 为未签名构建产物，安装前需要自行签名。\n",
+          "downloadURL": "https://github.com/Liano1125/Itch/releases/download/nightly/itchPocket-unsigned.ipa",
+          "size": 1883062
         }
       ]
     }
