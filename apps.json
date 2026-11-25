@@ -2,7 +2,7 @@
   "name": "Liano's ipasource",
   "identifier": "com.Lianolt.ipasource",
   "sourceURL": "即将替换为真实URL",
-  "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/AppStore.jpg",
+  "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/AppStoreIcon.png",
   "apps": [
     {
       "name": "PiliPlus",
