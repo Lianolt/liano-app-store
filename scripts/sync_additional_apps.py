@@ -12,10 +12,10 @@ APPS_FILE = os.path.join(ROOT, "apps.json")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 APPS = [
-    {"name":"短剧之家","repo":"jackherex/duanjuzhijia-down-ios","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/duanjuzhijia.png","description":"短剧之家 iOS 客户端，提供短剧内容浏览与观看。","bundle":"com.jackherex.duanjuzhijia"},
+    {"name":"短剧之家","repo":"jackherex/duanjuzhijia-down-ios","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/duanjuzhijia.png","description":"短剧之家 iOS 客户端，提供短剧内容浏览与观看。","bundle":"com.duanju.duanjuapp.v2"},
     {"name":"GuoDuo","repo":"81199000/GuoDuo","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/GuoDuo.png","description":"GuoDuo iOS 客户端。","bundle":"me.rrmm.hongguo"},
     {"name":"iBuilder","repo":"Absenti/iBuilder","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/ibuilder.png","description":"在 iPhone 上将自己拥有的 Nintendo Switch 游戏构建为原生 iOS 应用；不包含游戏、密钥或固件。","bundle":"dev.ibuilder.app"},
-    {"name":"轻哩","repo":"liuliuya2333/LiLite","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/LiLite.PNG","description":"轻哩（LiLite）iOS 客户端。","bundle":"com.liuliuya.lilite"},
+    {"name":"轻哩","repo":"liuliuya2333/LiLite","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/LiLite.PNG","description":"轻哩（LiLite）iOS 客户端。","bundle":"com.liuliuya.PiliNative"},
     {"name":"i 短剧","repo":"my-name-is-alan/iDuanJu","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/iDuanju.png","description":"i 短剧 iOS 客户端。","bundle":"com.local.STV"},
     {"name":"DSH Go","repo":"ccch1mneyyy/dsh-Go","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/DSH-Go.png","description":"DSH Go iOS 客户端。","bundle":"io.github.ccch1mneyyy.dshgo"},
     {"name":"Erosion","repo":"Kianuni/Erosion-CN","icon":"https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/Erosion.PNG","description":"Erosion 中文版 iOS 客户端。","bundle":"com.jbdotparty.Erosion"},
@@ -34,29 +34,8 @@ def request_json(url):
         return json.load(response)
 
 def get_bundle_id(asset_url, fallback):
-    # Read the actual bundle identifier from the IPA when possible.
-    headers = {"User-Agent":"Liano-iPASource-Sync"}
-    if TOKEN:
-        headers["Authorization"] = "Bearer " + TOKEN
-    req = urllib.request.Request(asset_url, headers=headers)
-    with tempfile.NamedTemporaryFile(suffix=".ipa") as tmp:
-        try:
-            with urllib.request.urlopen(req, timeout=180) as response:
-                while True:
-                    chunk = response.read(1024 * 1024)
-                    if not chunk:
-                        break
-                    tmp.write(chunk)
-            tmp.flush()
-            with zipfile.ZipFile(tmp.name) as archive:
-                candidates = [n for n in archive.namelist() if n.startswith("Payload/") and n.endswith(".app/Info.plist")]
-                if candidates:
-                    info = plistlib.loads(archive.read(candidates[0]))
-                    value = info.get("CFBundleIdentifier")
-                    if value:
-                        return value
-        except Exception as exc:
-            print("  WARN: IPA bundle ID inspection failed:", exc)
+    # Bundle identifiers were read from the IPA Info.plist during the initial import.
+    # Reuse the verified value so scheduled runs do not redownload large IPA files.
     return fallback
 
 def main():
