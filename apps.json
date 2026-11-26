@@ -251,21 +251,21 @@
       "name": "GuoDuo",
       "bundleIdentifier": "me.rrmm.hongguo",
       "developerName": "81199000",
-      "version": "v1.0.0",
-      "versionDate": "2026-11-26T06:35:28Z",
-      "versionDescription": "# GuoDuo 1.0.0\n\n## 全新首页\n- 奈飞主题首页（默认）：大海报，整页底色跟着封面主色变；继续观看、我的追剧、今日热播 Top 10、各榜单一行一行横着滑。\n- 顶部分区：全部 / 真人剧 / 漫剧 / AI 剧 / 系列剧 / 西饭 / 河马，按屏幕宽度自动排，放不下的收进「类别」。\n- 往下滑分区栏收起，往上滑弹回。也可以在「设置 → 首页主题」切回红果主题（两列大卡）。\n\n## 搜索\n- 没输入时有「热门搜索」和「为你推荐」，推荐的剧点播放键直接开播。\n- 打字联想带封面和热度；搜索结果都有封面；粘贴红果分享链接直接打开。\n\n## 电视联动（GuoDuo TV）\n- 「我的 → 设置 → 安装到电视」：手机自动找到家里的安卓电视，把 GuoDuo TV 装上。\n- 「连接遥控器」：扫码或局域网自动发现电视，手机当遥控器用。\n- 手机扫电视登录页上的二维码，用手机的红果账号确认，电视直接登录。\n- 手机看到一半点「更多 → 投到电视」，电视从同一秒接着播；遥控器里点「接到手机继续看」再接回手机。\n- 「我的」右上角加了扫一扫；长按 App 图标也能直接扫一扫、连接遥控器。\n\n## 播放\n- 黑边环境光：画面两侧透出画面颜色的光，设置里可调强弱或关掉。\n- 「更多」面板改成液态玻璃；「铺满全屏」挪进「更多」里。\n- 推荐页右侧按钮栏和首页菜单一样宽，进出推荐时有过渡动画。\n- 分集评论显示真实昵称和头像，滑到底自动加载更多。\n\n## 账号与设置\n- 手机号 + 验证码登录；登录后同步推荐、云端观看记录、收藏、预约，观看记录按账号分开存。\n- 设置页重新分组排版；新增「缓存管理」，封面和头像缓存到本地，不再每次重新加载。\n- 关于页：版本、检查更新、开源致谢。\n",
+      "version": "v1.0.1",
+      "versionDate": "2026-11-26T16:49:45Z",
+      "versionDescription": "# GuoDuo 1.0.1\n\n## 修复\n- 修复每部剧只显示前 3 集的问题：红果官网收紧了分集列表，现在改从红果 App 接口取完整分集，所有集数都能看到、都能播。\n\n## 播放\n- 边下边播：点开一集，文件头一到就开始播，不用等整集下完；往后拖到还没下到的地方也能接着播。\n- 上滑下一集更顺：下一集提前准备好，滑过去直接接上，不再闪黑、不再先铺满再缩回。\n- 滑动切集时不再闪出暂停键和标题（极简模式同样）。\n- 折叠屏外屏：横竖屏切换不再从头播放，竖屏转横屏不再黑一下。\n",
       "localizedDescription": "GuoDuo iOS 客户端。",
-      "downloadURL": "https://github.com/81199000/GuoDuo/releases/download/v1.0.0/GuoDuo-1.0.0-unsigned.ipa",
+      "downloadURL": "https://github.com/81199000/GuoDuo/releases/download/v1.0.1/GuoDuo-1.0.1-unsigned.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/GuoDuo.png",
       "tintColor": "#000000",
-      "size": 5340141,
+      "size": 5439351,
       "versions": [
         {
-          "version": "v1.0.0",
-          "date": "2026-11-26T06:35:28Z",
-          "localizedDescription": "# GuoDuo 1.0.0\n\n## 全新首页\n- 奈飞主题首页（默认）：大海报，整页底色跟着封面主色变；继续观看、我的追剧、今日热播 Top 10、各榜单一行一行横着滑。\n- 顶部分区：全部 / 真人剧 / 漫剧 / AI 剧 / 系列剧 / 西饭 / 河马，按屏幕宽度自动排，放不下的收进「类别」。\n- 往下滑分区栏收起，往上滑弹回。也可以在「设置 → 首页主题」切回红果主题（两列大卡）。\n\n## 搜索\n- 没输入时有「热门搜索」和「为你推荐」，推荐的剧点播放键直接开播。\n- 打字联想带封面和热度；搜索结果都有封面；粘贴红果分享链接直接打开。\n\n## 电视联动（GuoDuo TV）\n- 「我的 → 设置 → 安装到电视」：手机自动找到家里的安卓电视，把 GuoDuo TV 装上。\n- 「连接遥控器」：扫码或局域网自动发现电视，手机当遥控器用。\n- 手机扫电视登录页上的二维码，用手机的红果账号确认，电视直接登录。\n- 手机看到一半点「更多 → 投到电视」，电视从同一秒接着播；遥控器里点「接到手机继续看」再接回手机。\n- 「我的」右上角加了扫一扫；长按 App 图标也能直接扫一扫、连接遥控器。\n\n## 播放\n- 黑边环境光：画面两侧透出画面颜色的光，设置里可调强弱或关掉。\n- 「更多」面板改成液态玻璃；「铺满全屏」挪进「更多」里。\n- 推荐页右侧按钮栏和首页菜单一样宽，进出推荐时有过渡动画。\n- 分集评论显示真实昵称和头像，滑到底自动加载更多。\n\n## 账号与设置\n- 手机号 + 验证码登录；登录后同步推荐、云端观看记录、收藏、预约，观看记录按账号分开存。\n- 设置页重新分组排版；新增「缓存管理」，封面和头像缓存到本地，不再每次重新加载。\n- 关于页：版本、检查更新、开源致谢。\n",
-          "downloadURL": "https://github.com/81199000/GuoDuo/releases/download/v1.0.0/GuoDuo-1.0.0-unsigned.ipa",
-          "size": 5340141
+          "version": "v1.0.1",
+          "date": "2026-11-26T16:49:45Z",
+          "localizedDescription": "# GuoDuo 1.0.1\n\n## 修复\n- 修复每部剧只显示前 3 集的问题：红果官网收紧了分集列表，现在改从红果 App 接口取完整分集，所有集数都能看到、都能播。\n\n## 播放\n- 边下边播：点开一集，文件头一到就开始播，不用等整集下完；往后拖到还没下到的地方也能接着播。\n- 上滑下一集更顺：下一集提前准备好，滑过去直接接上，不再闪黑、不再先铺满再缩回。\n- 滑动切集时不再闪出暂停键和标题（极简模式同样）。\n- 折叠屏外屏：横竖屏切换不再从头播放，竖屏转横屏不再黑一下。\n",
+          "downloadURL": "https://github.com/81199000/GuoDuo/releases/download/v1.0.1/GuoDuo-1.0.1-unsigned.ipa",
+          "size": 5439351
         }
       ]
     },
@@ -405,21 +405,21 @@
       "name": "HGhubX",
       "bundleIdentifier": "com.hghubx.app",
       "developerName": "zxsos",
-      "version": "test-pre",
-      "versionDate": "2026-11-21T16:49:36Z",
-      "versionDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n# HGhubX Test Preview\n\n基于 `main`（`af811da`）自动合成的全平台预览构建（更新时间：`2026-11-26T10:19:01Z`，测试提交：`5df296f`）。\n> 此预发布仅供功能尝鲜与真机回归验证，不抢占正式版 Latest，也不会触发正式版客户端自动更新提示。\n\n## 本次已合入的测试 PR（2）\n1. #276 fix(tv,android): replace Tauri default FileProvider in place to prevent TV launch crash（@zxsos，`0bfed9e`）\n2. #278 我的收藏：拆分为追剧/连载组合筛选，并统一筛选图标（@makisekurisu-jp，`1f5ef78`）\n",
+      "version": "v3.0.0",
+      "versionDate": "2026-11-26T14:16:54Z",
+      "versionDescription": "# HGhubX v3.0.0\r\n\r\nHGhubX 3.0 正式版：视频内容改由可导入的视频源提供，支持多来源切换与手机、TV 局域网同步，并完成收藏筛选、缓存清理、扫码等多项体验升级；覆盖 Windows、macOS、Linux、Android 与 iOS。\r\n\r\n## 新增与优化\r\n1. **视频源插件系统与离线示例试用**：支持扫码、`hghubx://` 深链、剪贴板口令、HTTPS 链接及本地文件导入，提供切换、回滚、连通性测试及每次进入静默检查更新（60 秒冷却）；无源引导页提供「试用离线示例源」与顶部一键「移除示例源」，可零网络预览界面，随时一键移除。\r\n2. **「我的收藏」组合筛选与下拉刷新（#278）**：将收藏筛选拆分为「观看状态（不限 / 未看完 / 已看完）」与「连载状态（不限 / 连载中 / 已完结）」两轴正交交集，实时联动计数并统一三道杠筛选图标；新增顶部下拉刷新手势与「刷新收藏」按钮，同步检查更新部数与新增集数。\r\n3. **手机与 TV 局域网双向同步配对**：支持手机「扫一扫」识别 TV 二维码或 4 位配对码直连电视端，同步视频源配置、本机收藏/观看记录、内容偏好与常用播放设置；桌面端不再显示 TV 连接与扫码同步入口。\r\n4. **作者目录、标签页与列表加载提速**：作者目录首屏第 1 页即刻渲染并在后台 4 并发补齐分页；「标签」「专题」与搜索页「热门题材」接入按源与线路隔离的本地缓存，二次进入秒开并后台静默刷新；优化源存储并发读写性能。\r\n5. **真实跨平台缓存清理与最高无上限档位**：支持 `128 MB`、`256 MB`、`512 MB`、`1 GB` 与「无上限」5 档调节，真实统计并清理跨端缓存文件（Windows / macOS / Linux / Android / iOS），完整保留登录态、收藏、观看记录与偏好设置。\r\n6. **扫码画质与对焦升级**：「扫一扫」升级 1080p/720p 高清优先流与主后置镜头识别，支持连续自动对焦、点击画面对焦、多镜头「切镜头」切换以及硬件 `BarcodeDetector` 直连解码。\r\n7. **界面细节与包体积优化**：「关于 HGhubX」弹窗换回正式应用 Logo；去掉视频源导入框冗长提示；开启 Android `.so` 与资源压缩及播放器按需拆包，安装包体积大幅减小（Android `arm64` 约 `5.3 MB`）。\r\n\r\n## 修复\r\n1. **切换视频源后封面正常但播放失败**：从离线示例源导入或切换视频源后，推荐流可能停留在旧源条目、播放能力未及时刷新，需要再导入一次才能播放；现在切源后首页、搜索、分类按新源重新加载，播放地址在能力就绪后自动获取。\r\n2. **剪贴板「粘贴」权限不足**：开放原生剪贴板读取能力并统一走原生插件读取，解决部分端拦截网页粘贴的问题。\r\n3. **分类页功能布局与排行榜/标签排版**：恢复完整能力门控入口并修正紧凑双格按钮对齐与文字错位。\r\n4. **iOS 侧载「文件损坏」与插件连接池（#261、#266）**：补齐 iOS 未签包 ad-hoc 签名与权限/深链配置；为源请求接入复用连接池与受控 DoH 回退，改善部分网络下的误报失败。\r\n\r\n## 安装与兼容提示\r\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb` 与 `.rpm`；Android 提供按 ABI 分包签名 APK（`versionCode=3000000`）；iOS 提供已 ad-hoc 签名的 `.ipa`（需自行重签侧载安装）。\r\n- 从 2.x 升级后首次启动需导入视频源（也可先试用离线示例源）；既有本地收藏、观看记录与偏好设置均予保留。\r\n- 从 3.0 预发布版可直接覆盖安装。\r\n\r\n## 致谢\r\n- 感谢 @makisekurisu-jp、@zxsos 与所有社区反馈者对本版本的贡献。\r\n\r\n## 验证\r\n- 发版前本地完成 `pnpm build`（三套 TypeScript + Vite 构建）、`check-i18n`、`check-doc-links`、`check-size-budgets`、`check-version-sync`、`check-shell-purity`、`make test-tv`、`pnpm test:smoke`（18/18）与 `test-tv-remote`（14/14 场景）；Rust 源码自 3.0.0-pre.2 起无改动，Rust 检查与单元测试由 GitHub Actions `CI` 工作流执行，全平台产物由 GitHub Actions `Release` 工作流构建。\r\n",
       "localizedDescription": "HGhubX iOS 客户端。",
-      "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/test-pre/HGhubX_2.2.10_ios.ipa",
+      "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v3.0.0/HGhubX_3.0.0_ios.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/HGhubX.png",
       "tintColor": "#000000",
-      "size": 4168956,
+      "size": 4865415,
       "versions": [
         {
-          "version": "test-pre",
-          "date": "2026-11-21T16:49:36Z",
-          "localizedDescription": "⚠️ GitHub 预发行版本（非正式稳定版）\n\n# HGhubX Test Preview\n\n基于 `main`（`af811da`）自动合成的全平台预览构建（更新时间：`2026-11-26T10:19:01Z`，测试提交：`5df296f`）。\n> 此预发布仅供功能尝鲜与真机回归验证，不抢占正式版 Latest，也不会触发正式版客户端自动更新提示。\n\n## 本次已合入的测试 PR（2）\n1. #276 fix(tv,android): replace Tauri default FileProvider in place to prevent TV launch crash（@zxsos，`0bfed9e`）\n2. #278 我的收藏：拆分为追剧/连载组合筛选，并统一筛选图标（@makisekurisu-jp，`1f5ef78`）\n",
-          "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/test-pre/HGhubX_2.2.10_ios.ipa",
-          "size": 4168956
+          "version": "v3.0.0",
+          "date": "2026-11-26T14:16:54Z",
+          "localizedDescription": "# HGhubX v3.0.0\r\n\r\nHGhubX 3.0 正式版：视频内容改由可导入的视频源提供，支持多来源切换与手机、TV 局域网同步，并完成收藏筛选、缓存清理、扫码等多项体验升级；覆盖 Windows、macOS、Linux、Android 与 iOS。\r\n\r\n## 新增与优化\r\n1. **视频源插件系统与离线示例试用**：支持扫码、`hghubx://` 深链、剪贴板口令、HTTPS 链接及本地文件导入，提供切换、回滚、连通性测试及每次进入静默检查更新（60 秒冷却）；无源引导页提供「试用离线示例源」与顶部一键「移除示例源」，可零网络预览界面，随时一键移除。\r\n2. **「我的收藏」组合筛选与下拉刷新（#278）**：将收藏筛选拆分为「观看状态（不限 / 未看完 / 已看完）」与「连载状态（不限 / 连载中 / 已完结）」两轴正交交集，实时联动计数并统一三道杠筛选图标；新增顶部下拉刷新手势与「刷新收藏」按钮，同步检查更新部数与新增集数。\r\n3. **手机与 TV 局域网双向同步配对**：支持手机「扫一扫」识别 TV 二维码或 4 位配对码直连电视端，同步视频源配置、本机收藏/观看记录、内容偏好与常用播放设置；桌面端不再显示 TV 连接与扫码同步入口。\r\n4. **作者目录、标签页与列表加载提速**：作者目录首屏第 1 页即刻渲染并在后台 4 并发补齐分页；「标签」「专题」与搜索页「热门题材」接入按源与线路隔离的本地缓存，二次进入秒开并后台静默刷新；优化源存储并发读写性能。\r\n5. **真实跨平台缓存清理与最高无上限档位**：支持 `128 MB`、`256 MB`、`512 MB`、`1 GB` 与「无上限」5 档调节，真实统计并清理跨端缓存文件（Windows / macOS / Linux / Android / iOS），完整保留登录态、收藏、观看记录与偏好设置。\r\n6. **扫码画质与对焦升级**：「扫一扫」升级 1080p/720p 高清优先流与主后置镜头识别，支持连续自动对焦、点击画面对焦、多镜头「切镜头」切换以及硬件 `BarcodeDetector` 直连解码。\r\n7. **界面细节与包体积优化**：「关于 HGhubX」弹窗换回正式应用 Logo；去掉视频源导入框冗长提示；开启 Android `.so` 与资源压缩及播放器按需拆包，安装包体积大幅减小（Android `arm64` 约 `5.3 MB`）。\r\n\r\n## 修复\r\n1. **切换视频源后封面正常但播放失败**：从离线示例源导入或切换视频源后，推荐流可能停留在旧源条目、播放能力未及时刷新，需要再导入一次才能播放；现在切源后首页、搜索、分类按新源重新加载，播放地址在能力就绪后自动获取。\r\n2. **剪贴板「粘贴」权限不足**：开放原生剪贴板读取能力并统一走原生插件读取，解决部分端拦截网页粘贴的问题。\r\n3. **分类页功能布局与排行榜/标签排版**：恢复完整能力门控入口并修正紧凑双格按钮对齐与文字错位。\r\n4. **iOS 侧载「文件损坏」与插件连接池（#261、#266）**：补齐 iOS 未签包 ad-hoc 签名与权限/深链配置；为源请求接入复用连接池与受控 DoH 回退，改善部分网络下的误报失败。\r\n\r\n## 安装与兼容提示\r\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb` 与 `.rpm`；Android 提供按 ABI 分包签名 APK（`versionCode=3000000`）；iOS 提供已 ad-hoc 签名的 `.ipa`（需自行重签侧载安装）。\r\n- 从 2.x 升级后首次启动需导入视频源（也可先试用离线示例源）；既有本地收藏、观看记录与偏好设置均予保留。\r\n- 从 3.0 预发布版可直接覆盖安装。\r\n\r\n## 致谢\r\n- 感谢 @makisekurisu-jp、@zxsos 与所有社区反馈者对本版本的贡献。\r\n\r\n## 验证\r\n- 发版前本地完成 `pnpm build`（三套 TypeScript + Vite 构建）、`check-i18n`、`check-doc-links`、`check-size-budgets`、`check-version-sync`、`check-shell-purity`、`make test-tv`、`pnpm test:smoke`（18/18）与 `test-tv-remote`（14/14 场景）；Rust 源码自 3.0.0-pre.2 起无改动，Rust 检查与单元测试由 GitHub Actions `CI` 工作流执行，全平台产物由 GitHub Actions `Release` 工作流构建。\r\n",
+          "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v3.0.0/HGhubX_3.0.0_ios.ipa",
+          "size": 4865415
         }
       ]
     },
@@ -427,21 +427,21 @@
       "name": "i 短剧",
       "bundleIdentifier": "com.local.STV",
       "developerName": "my-name-is-alan",
-      "version": "v1.6b39",
-      "versionDate": "2026-11-26T10:29:49Z",
-      "versionDescription": "i短剧 iOS 1.6b39 (v1.6b39)\n\n包内版本为 1.6 build 39。IPA 未签名（最低 iOS 16），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：c60bc5bf7f0db1fea0691cfc42ec0196536f4cd5\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45798464346\n",
+      "version": "v1.6b41",
+      "versionDate": "2026-11-26T14:44:55Z",
+      "versionDescription": "i短剧 iOS 1.6b41 (v1.6b41)\n\n包内版本为 1.6 build 41。IPA 未签名（最低 iOS 16），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：2fe0b4969274cca1eccd8697af1a6f4fe82ddb4f\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45838169992\n",
       "localizedDescription": "i 短剧 iOS 客户端。",
-      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b39/STV-1.6b39-unsigned.ipa",
+      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b41/STV-1.6b41-unsigned.ipa",
       "iconURL": "https://raw.githubusercontent.com/Lianolt/liano-app-store/main/appicon/iDuanju.png",
       "tintColor": "#000000",
-      "size": 54299493,
+      "size": 54330260,
       "versions": [
         {
-          "version": "v1.6b39",
-          "date": "2026-11-26T10:29:49Z",
-          "localizedDescription": "i短剧 iOS 1.6b39 (v1.6b39)\n\n包内版本为 1.6 build 39。IPA 未签名（最低 iOS 16），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：c60bc5bf7f0db1fea0691cfc42ec0196536f4cd5\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45798464346\n",
-          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b39/STV-1.6b39-unsigned.ipa",
-          "size": 54299493
+          "version": "v1.6b41",
+          "date": "2026-11-26T14:44:55Z",
+          "localizedDescription": "i短剧 iOS 1.6b41 (v1.6b41)\n\n包内版本为 1.6 build 41。IPA 未签名（最低 iOS 16），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：2fe0b4969274cca1eccd8697af1a6f4fe82ddb4f\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45838169992\n",
+          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b41/STV-1.6b41-unsigned.ipa",
+          "size": 54330260
         }
       ]
     },
